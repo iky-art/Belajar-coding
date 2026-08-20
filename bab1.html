@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 1 - Logika Dasar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">BelajarDariNol</span>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">☰</button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="bab1.html" class="active">1. Logika</a></li>
+                <li><a href="bab2.html">2. Algoritma</a></li>
+                <li><a href="bab3.html">3. HTML Dasar</a></li>
+                <li><a href="bab4.html">4. CSS Dasar</a></li>
+                <li><a href="bab5.html">5. JavaScript</a></li>
+                <li><a href="bab6.html">6. Variabel</a></li>
+                <li><a href="bab7.html">7. Percabangan</a></li>
+                <li><a href="bab8.html">8. Perulangan</a></li>
+                <li><a href="bab9.html">9. PBO</a></li>
+                <li><a href="bab10.html">10. Database</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== BAB 1: LOGIKA ========== -->
+    <section class="bab bab-full">
+        <div class="container">
+            <div class="bab-header">
+                <span class="bab-number">01</span>
+                <h2>Apa Itu Logika?</h2>
+                <div class="bab-nav">
+                    <a href="index.html" class="btn btn-small">🏠 Home</a>
+                    <a href="bab2.html" class="btn btn-small btn-primary">Bab 2 →</a>
+                </div>
+            </div>
+            
+            <div class="bab-content">
+                <div class="materi-box">
+                    <h3>🧠 Logika adalah Akal Sehat</h3>
+                    <p>
+                        <strong>Logika</strong> adalah cara berpikir yang masuk akal. 
+                        Dalam pemrograman, logika adalah <strong>dasar dari semua keputusan</strong> 
+                        yang dibuat komputer.
+                    </p>
+                    
+                    <div class="contoh-box">
+                        <h4>📌 Contoh Logika Sehari-hari</h4>
+                        <ul>
+                            <li><strong>Jika</strong> hujan, <strong>maka</strong> bawa payung</li>
+                            <li><strong>Jika</strong> lapar, <strong>maka</strong> makan</li>
+                            <li><strong>Jika</strong> nilai ≥ 75, <strong>maka</strong> lulus</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contoh-box">
+                        <h4>💻 Logika dalam Kode</h4>
+                        <div class="code-block">
+                            <span class="comment">// Logika: Jika nilai >= 75 maka LULUS</span><br>
+                            <span class="keyword">if</span> (nilai >= 75) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"LULUS!"</span>);<br>
+                            } <span class="keyword">else</span> {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"REMEDIAL"</span>);<br>
+                            }
+                        </div>
+                    </div>
+                    
+                    <div class="contoh-box">
+                        <h4>📊 Operasi Logika</h4>
+                        <table class="tag-table">
+                            <tr><th>Operator</th><th>Arti</th><th>Contoh</th></tr>
+                            <tr><td>&&</td><td>DAN</td><td>nilai >= 75 && absen >= 80</td></tr>
+                            <tr><td>||</td><td>ATAU</td><td>nilai >= 90 || nilai >= 85</td></tr>
+                            <tr><td>!</td><td>TIDAK</td><td>!lulus (kebalikan dari lulus)</td></tr>
+                            <tr><td>==</td><td>Sama dengan</td><td>grade == 'A'</td></tr>
+                            <tr><td>!=</td><td>Tidak sama</td><td>nilai != 0</td></tr>
+                        </table>
+                    </div>
+                    
+                    <div class="quiz-box">
+                        <h4>✏️ Latihan Logika</h4>
+                        <p>Buatlah logika untuk:</p>
+                        <p class="quiz-soal">"Jika umur lebih dari 17 tahun, maka bisa membuat SIM"</p>
+                        <button class="btn btn-small btn-info" onclick="tampilkanJawaban('jawaban1')">Lihat Jawaban</button>
+                        <div id="jawaban1" class="jawaban" style="display:none;">
+                            <div class="code-block">
+                                <span class="keyword">if</span> (umur > 17) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Bisa membuat SIM"</span>);<br>
+                                } <span class="keyword">else</span> {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Belum cukup umur"</span>);<br>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ========== BOTTOM NAV ========== -->
+            <div class="bottom-nav">
+                <a href="index.html" class="btn">🏠 Home</a>
+                <a href="bab2.html" class="btn btn-primary">Bab 2: Algoritma →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Belajar Dari Nol - Untuk Siswa RPL Kelas 11</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+  </html>
