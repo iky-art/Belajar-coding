@@ -8,21 +8,24 @@
 </head>
 <body>
 
-    <!-- ========== NAVBAR ========== -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <span class="logo-icon">🚀</span>
-                <span class="logo-text">BelajarDariNol</span>
-            </div>
-            
-            <button class="nav-toggle" id="navToggle">☰</button>
-            
+            <a href="index.html" class="logo">
+                <span class="logo-icon">R</span>
+                <span class="logo-text">Belajar<span>RPL</span></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle">
+                <span class="garis"></span>
+                <span class="garis"></span>
+                <span class="garis"></span>
+            </button>
+
             <ul class="nav-menu" id="navMenu">
                 <li><a href="bab1.html">1. Logika</a></li>
                 <li><a href="bab2.html">2. Algoritma</a></li>
-                <li><a href="bab3.html">3. HTML Dasar</a></li>
-                <li><a href="bab4.html">4. CSS Dasar</a></li>
+                <li><a href="bab3.html">3. HTML</a></li>
+                <li><a href="bab4.html">4. CSS</a></li>
                 <li><a href="bab5.html" class="active">5. JavaScript</a></li>
                 <li><a href="bab6.html">6. Variabel</a></li>
                 <li><a href="bab7.html">7. Percabangan</a></li>
@@ -33,138 +36,78 @@
         </div>
     </nav>
 
-    <!-- ========== BAB 5: JAVASCRIPT ========== -->
-    <section class="bab bab-full">
+    <section class="bab">
         <div class="container">
             <div class="bab-header">
                 <span class="bab-number">05</span>
                 <h2>JavaScript Dasar</h2>
                 <div class="bab-nav">
                     <a href="bab4.html" class="btn btn-small">← Bab 4</a>
-                    <a href="index.html" class="btn btn-small">🏠 Home</a>
+                    <a href="index.html" class="btn btn-small">Home</a>
                     <a href="bab6.html" class="btn btn-small btn-primary">Bab 6 →</a>
                 </div>
             </div>
-            
+
             <div class="bab-content">
                 <div class="materi-box">
-                    <h3>⚡ JavaScript = Otak Website</h3>
+                    <h3>Apa Itu JavaScript?</h3>
                     <p>
-                        <strong>JavaScript</strong> adalah bahasa pemrograman yang membuat 
-                        website menjadi <strong>hidup</strong> dan <strong>interaktif</strong>.
-                        Kalau HTML itu kerangka dan CSS itu baju, maka JavaScript adalah 
-                        <strong>otak</strong> yang menggerakkan semuanya!
+                        JavaScript adalah bahasa yang bikin website jadi hidup. 
+                        Kalau HTML itu kerangka dan CSS itu baju, JavaScript itu otaknya.
                     </p>
-                    
+                    <p>
+                        Dengan JavaScript, kamu bisa bikin tombol yang bisa diklik, 
+                        nampilin pesan, ngubah teks, dan banyak lagi.
+                    </p>
+
                     <div class="contoh-box">
-                        <h4>📌 Apa yang Bisa Dilakukan JavaScript?</h4>
-                        <ul>
-                            <li>Menampilkan <strong>alert</strong> (pesan pop-up)</li>
-                            <li>Mengubah <strong>isi teks</strong> di halaman</li>
-                            <li>Menanggapi <strong>klik tombol</strong></li>
-                            <li>Menghitung <strong>angka</strong></li>
-                            <li>Memvalidasi <strong>form</strong> (cek input)</li>
-                            <li>Membuat <strong>animasi</strong> sederhana</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="contoh-box">
-                        <h4>📌 Cara Menulis JavaScript</h4>
+                        <h4>Contoh JavaScript Sederhana</h4>
                         <div class="code-block">
-                            <span class="comment">// Cara 1: Di dalam tag &lt;script&gt;</span><br>
-                            <span class="tag">&lt;script&gt;</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">alert</span>(<span class="string">"Halo Dunia!"</span>);<br>
-                            <span class="tag">&lt;/script&gt;</span>
-                            
-                            <br><br>
-                            <span class="comment">// Cara 2: Di file terpisah (script.js)</span><br>
-                            <span class="comment">// Dipanggil dengan: &lt;script src="script.js"&gt;&lt;/script&gt;</span><br>
-                            <span class="output">console.log</span>(<span class="string">"Pesan di console"</span>);
+                            <span class="comment">// Nampilin pesan pop-up</span>
+                            <span class="output">alert</span>(<span class="string">"Halo!"</span>);
+
+                            <span class="comment">// Nampilin pesan di console (F12)</span>
+                            <span class="output">console.log</span>(<span class="string">"Pesan rahasia"</span>);
+
+                            <span class="comment">// Ngubah teks di halaman</span>
+                            <span class="output">document.getElementById</span>(<span class="string">"demo"</span>).<span class="property">innerHTML</span> = <span class="string">"Teks berubah"</span>;
                         </div>
                     </div>
-                    
+
                     <div class="contoh-box">
-                        <h4>💻 Contoh JavaScript Sederhana</h4>
-                        <div class="code-block">
-                            <span class="comment">// Menampilkan pesan pop-up</span><br>
-                            <span class="output">alert</span>(<span class="string">"Selamat datang!"</span>);
-                            
-                            <br><br>
-                            <span class="comment">// Menampilkan pesan di console (F12)</span><br>
-                            <span class="output">console.log</span>(<span class="string">"Ini pesan di console"</span>);
-                            
-                            <br><br>
-                            <span class="comment">// Mengubah teks di halaman</span><br>
-                            <span class="output">document.getElementById</span>(<span class="string">"demo"</span>).<span class="property">innerHTML</span> = <span class="string">"Teks berubah!"</span>;
-                            
-                            <br><br>
-                            <span class="comment">// Menghitung penjumlahan</span><br>
-                            <span class="keyword">let</span> a = 10;<br>
-                            <span class="keyword">let</span> b = 5;<br>
-                            <span class="keyword">let</span> hasil = a + b;<br>
-                            <span class="output">alert</span>(<span class="string">"Hasil: "</span> + hasil);
+                        <h4>Coba Sendiri</h4>
+                        <p>Klik tombol di bawah:</p>
+                        <div style="display:flex; gap:10px; flex-wrap:wrap; margin:10px 0;">
+                            <button class="btn btn-primary" onclick="alert('Halo!')">Pop-up</button>
+                            <button class="btn btn-success" onclick="ubahTeks()">Ubah Teks</button>
+                            <button class="btn btn-info" onclick="hitung()">Hitung</button>
+                            <button class="btn btn-warning" onclick="resetTeks()">Reset</button>
+                        </div>
+                        <div id="demoJS" style="padding:15px; background:#f0f0f5; border-radius:8px; border:1px solid #ddd; min-height:40px;">
+                            Teks ini bakal berubah
+                        </div>
+                        <div id="hasilHitung" style="margin-top:10px; padding:10px; background:#1a1a2e; color:#8be9fd; border-radius:8px; font-family:monospace; min-height:30px;">
+                            // Hasil muncul di sini
                         </div>
                     </div>
-                    
-                    <div class="contoh-box">
-                        <h4>🎯 Contoh Interaktif - Coba Sendiri!</h4>
-                        <p style="margin-bottom:15px;">Klik tombol di bawah ini untuk melihat JavaScript bekerja:</p>
-                        
-                        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:15px;">
-                            <button class="btn btn-primary" onclick="alert('Halo! Selamat belajar JavaScript!')">
-                                👋 Pop-up
-                            </button>
-                            <button class="btn btn-success" onclick="ubahTeks()">
-                                📝 Ubah Teks
-                            </button>
-                            <button class="btn btn-info" onclick="hitung()">
-                                ➕ Hitung
-                            </button>
-                            <button class="btn btn-warning" onclick="resetTeks()">
-                                ↺ Reset
-                            </button>
-                        </div>
-                        
-                        <div id="demoJS" style="padding:15px; background:#edf2f7; border-radius:8px; border:2px dashed #4fc3f7; min-height:50px;">
-                            Teks ini akan berubah saat tombol ditekan
-                        </div>
-                        
-                        <div id="hasilHitung" style="margin-top:10px; padding:10px; background:#1a202c; color:#4fc3f7; border-radius:8px; font-family:monospace; min-height:30px;">
-                            // Hasil perhitungan akan muncul di sini
-                        </div>
-                    </div>
-                    
-                    <div class="contoh-box">
-                        <h4>📊 Fungsi JavaScript yang Sering Dipakai</h4>
-                        <table class="tag-table">
-                            <tr><th>Fungsi</th><th>Fungsi</th><th>Contoh</th></tr>
-                            <tr><td>alert()</td><td>Menampilkan pop-up</td><td>alert("Pesan")</td></tr>
-                            <tr><td>console.log()</td><td>Menampilkan di console</td><td>console.log("Pesan")</td></tr>
-                            <tr><td>document.getElementById()</td><td>Mengambil elemen HTML</td><td>document.getElementById("id")</td></tr>
-                            <tr><td>.innerHTML</td><td>Mengubah isi elemen</td><td>element.innerHTML = "Teks"</td></tr>
-                            <tr><td>.style</td><td>Mengubah style CSS</td><td>element.style.color = "red"</td></tr>
-                            <tr><td>addEventListener()</td><td>Menambah event</td><td>button.addEventListener("click", fungsi)</td></tr>
-                        </table>
-                    </div>
-                    
+
                     <div class="quiz-box">
-                        <h4>✏️ Latihan JavaScript</h4>
-                        <p>Buatlah JavaScript untuk:</p>
-                        <p class="quiz-soal">"Buat alert yang menampilkan 'Halo, Nama Saya Budi'"</p>
+                        <h4>Latihan</h4>
+                        <p>Buat JavaScript untuk:</p>
+                        <p class="quiz-soal">"Tampilkan alert dengan tulisan 'Selamat Belajar!'"</p>
                         <button class="btn btn-small btn-info" onclick="tampilkanJawaban('jawaban5')">Lihat Jawaban</button>
                         <div id="jawaban5" class="jawaban" style="display:none;">
                             <div class="code-block">
-                                <span class="output">alert</span>(<span class="string">"Halo, Nama Saya Budi"</span>);
+                                <span class="output">alert</span>(<span class="string">"Selamat Belajar!"</span>);
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- ========== BOTTOM NAV ========== -->
+
             <div class="bottom-nav">
                 <a href="bab4.html" class="btn">← Bab 4: CSS</a>
-                <a href="index.html" class="btn">🏠 Home</a>
+                <a href="index.html" class="btn">Home</a>
                 <a href="bab6.html" class="btn btn-primary">Bab 6: Variabel →</a>
             </div>
         </div>
@@ -172,10 +115,10 @@
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 Belajar Dari Nol - Untuk Siswa RPL Kelas 11</p>
+            <p>© 2026 Belajar RPL - Buat siswa kelas 11</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-                          </html>
+</html>
