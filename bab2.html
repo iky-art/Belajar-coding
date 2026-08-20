@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 2 - Algoritma Dasar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">BelajarDariNol</span>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">☰</button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="bab1.html">1. Logika</a></li>
+                <li><a href="bab2.html" class="active">2. Algoritma</a></li>
+                <li><a href="bab3.html">3. HTML Dasar</a></li>
+                <li><a href="bab4.html">4. CSS Dasar</a></li>
+                <li><a href="bab5.html">5. JavaScript</a></li>
+                <li><a href="bab6.html">6. Variabel</a></li>
+                <li><a href="bab7.html">7. Percabangan</a></li>
+                <li><a href="bab8.html">8. Perulangan</a></li>
+                <li><a href="bab9.html">9. PBO</a></li>
+                <li><a href="bab10.html">10. Database</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== BAB 2: ALGORITMA ========== -->
+    <section class="bab bab-full">
+        <div class="container">
+            <div class="bab-header">
+                <span class="bab-number">02</span>
+                <h2>Apa Itu Algoritma?</h2>
+                <div class="bab-nav">
+                    <a href="bab1.html" class="btn btn-small">← Bab 1</a>
+                    <a href="index.html" class="btn btn-small">🏠 Home</a>
+                    <a href="bab3.html" class="btn btn-small btn-primary">Bab 3 →</a>
+                </div>
+            </div>
+            
+            <div class="bab-content">
+                <div class="materi-box">
+                    <h3>📋 Algoritma = Langkah-langkah</h3>
+                    <p>
+                        <strong>Algoritma</strong> adalah urutan langkah-langkah logis 
+                        untuk menyelesaikan masalah. Kayak <strong>resep masakan</strong>!
+                    </p>
+                    
+                    <div class="contoh-box">
+                        <h4>📌 Contoh Algoritma Membuat Kopi</h4>
+                        <ol>
+                            <li>Masukkan air ke panci</li>
+                            <li>Rebus air sampai mendidih</li>
+                            <li>Masukkan kopi ke gelas</li>
+                            <li>Tuang air panas ke gelas</li>
+                            <li>Tambahkan gula</li>
+                            <li>Aduk sampai rata</li>
+                            <li>Kopi siap diminum</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="contoh-box">
+                        <h4>📌 Ciri-ciri Algoritma yang Baik</h4>
+                        <ul>
+                            <li><strong>Jelas</strong> - Setiap langkah mudah dipahami</li>
+                            <li><strong>Urut</strong> - Ada urutan yang logis</li>
+                            <li><strong>Terbatas</strong> - Ada akhir (tidak berputar terus)</li>
+                            <li><strong>Efektif</strong> - Bisa dijalankan</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contoh-box">
+                        <h4>💻 Algoritma dalam Kode</h4>
+                        <div class="code-block">
+                            <span class="comment">// Algoritma menghitung luas persegi panjang</span><br>
+                            <span class="comment">// 1. Tentukan panjang</span><br>
+                            <span class="keyword">int</span> panjang = 10;<br>
+                            <span class="comment">// 2. Tentukan lebar</span><br>
+                            <span class="keyword">int</span> lebar = 5;<br>
+                            <span class="comment">// 3. Hitung luas (panjang × lebar)</span><br>
+                            <span class="keyword">int</span> luas = panjang * lebar;<br>
+                            <span class="comment">// 4. Tampilkan hasil</span><br>
+                            <span class="output">System.out.println</span>(<span class="string">"Luas = "</span> + luas);
+                        </div>
+                    </div>
+                    
+                    <div class="contoh-box">
+                        <h4>📊 Representasi Algoritma</h4>
+                        <p>Algoritma bisa ditulis dalam:</p>
+                        <ul>
+                            <li><strong>Deskripsi</strong> - Tulisan biasa</li>
+                            <li><strong>Flowchart</strong> - Diagram alir</li>
+                            <li><strong>Pseudocode</strong> - Mirip kode tapi bahasa manusia</li>
+                        </ul>
+                        
+                        <div class="code-block" style="margin-top:10px;">
+                            <span class="comment">// Pseudocode menghitung rata-rata</span><br>
+                            <span class="keyword">INPUT</span> nilai1, nilai2, nilai3<br>
+                            <span class="keyword">COMPUTE</span> total = nilai1 + nilai2 + nilai3<br>
+                            <span class="keyword">COMPUTE</span> rata = total / 3<br>
+                            <span class="keyword">OUTPUT</span> rata
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-box">
+                        <h4>✏️ Latihan Algoritma</h4>
+                        <p>Buatlah algoritma untuk:</p>
+                        <p class="quiz-soal">"Menghitung rata-rata 3 nilai ujian"</p>
+                        <button class="btn btn-small btn-info" onclick="tampilkanJawaban('jawaban2')">Lihat Jawaban</button>
+                        <div id="jawaban2" class="jawaban" style="display:none;">
+                            <div class="code-block">
+                                <span class="comment">// 1. Siapkan 3 nilai</span><br>
+                                <span class="keyword">int</span> nilai1 = 80;<br>
+                                <span class="keyword">int</span> nilai2 = 90;<br>
+                                <span class="keyword">int</span> nilai3 = 75;<br>
+                                <span class="comment">// 2. Jumlahkan semua nilai</span><br>
+                                <span class="keyword">int</span> total = nilai1 + nilai2 + nilai3;<br>
+                                <span class="comment">// 3. Bagi dengan jumlah data (3)</span><br>
+                                <span class="keyword">double</span> rata = total / 3.0;<br>
+                                <span class="comment">// 4. Tampilkan hasil</span><br>
+                                <span class="output">System.out.println</span>(<span class="string">"Rata-rata = "</span> + rata);
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ========== BOTTOM NAV ========== -->
+            <div class="bottom-nav">
+                <a href="bab1.html" class="btn">← Bab 1: Logika</a>
+                <a href="index.html" class="btn">🏠 Home</a>
+                <a href="bab3.html" class="btn btn-primary">Bab 3: HTML →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Belajar Dari Nol - Untuk Siswa RPL Kelas 11</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
