@@ -1,112 +1,73 @@
-// ============================================
-// TOGGLE NAVBAR MOBILE - HAMBURGER KE X
-// ============================================
+// HAMBURGER TOGGLE
 document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
 
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            // Toggle class active untuk hamburger -> X
+    if (toggle && menu) {
+        toggle.addEventListener('click', function() {
             this.classList.toggle('active');
-            // Toggle class show untuk menu
-            navMenu.classList.toggle('show');
+            menu.classList.toggle('show');
         });
 
-        // Tutup menu saat klik link di mobile
-        const navLinks = navMenu.querySelectorAll('a');
-        navLinks.forEach(function(link) {
+        // Tutup menu kalau klik link
+        menu.querySelectorAll('a').forEach(function(link) {
             link.addEventListener('click', function() {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('show');
+                toggle.classList.remove('active');
+                menu.classList.remove('show');
             });
         });
     }
 
-    // ============================================
-    // ACTIVE LINK HIGHLIGHT
-    // ============================================
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(function(link) {
-        const href = link.getAttribute('href');
-        if (href === currentPage) {
+    // Active link sesuai halaman
+    const current = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-menu a').forEach(function(link) {
+        if (link.getAttribute('href') === current) {
             link.classList.add('active');
-        } else {
-            link.classList.remove('active');
         }
     });
 });
 
-// ============================================
-// FUNGSI TAMPILKAN JAWABAN
-// ============================================
+// FUNGSI JAWABAN
 function tampilkanJawaban(id) {
-    const jawaban = document.getElementById(id);
-    if (jawaban) {
-        if (jawaban.style.display === 'none' || jawaban.style.display === '') {
-            jawaban.style.display = 'block';
-            jawaban.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const el = document.getElementById(id);
+    if (el) {
+        if (el.style.display === 'none' || el.style.display === '') {
+            el.style.display = 'block';
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
-            jawaban.style.display = 'none';
+            el.style.display = 'none';
         }
     }
 }
 
-// ============================================
-// FUNGSI UNTUK BAB 5 (JavaScript Interaktif)
-// ============================================
+// FUNGSI BAB 5
 function ubahTeks() {
-    const demo = document.getElementById('demoJS');
-    if (demo) {
-        demo.innerHTML = '✅ Teks berhasil diubah menggunakan JavaScript!';
-        demo.style.background = '#e8f8f0';
-        demo.style.borderColor = '#00b894';
-        demo.style.color = '#1a1a2e';
+    const el = document.getElementById('demoJS');
+    if (el) {
+        el.innerHTML = 'Teks berhasil diubah!';
+        el.style.background = '#e8f8f0';
+        el.style.borderColor = '#00b894';
     }
 }
 
 function resetTeks() {
-    const demo = document.getElementById('demoJS');
-    if (demo) {
-        demo.innerHTML = 'Teks ini akan berubah saat tombol ditekan';
-        demo.style.background = '#f8f9fd';
-        demo.style.borderColor = '#6c5ce7';
-        demo.style.color = '#4a4a6a';
+    const el = document.getElementById('demoJS');
+    if (el) {
+        el.innerHTML = 'Teks ini bakal berubah';
+        el.style.background = '#f0f0f5';
+        el.style.borderColor = '#ddd';
     }
 }
 
 function hitung() {
-    const hasil = document.getElementById('hasilHitung');
-    if (hasil) {
-        const a = 10;
-        const b = 5;
-        const total = a + b;
-        hasil.innerHTML = `Hasil: ${a} + ${b} = ${total}`;
-        hasil.style.color = '#00b894';
+    const el = document.getElementById('hasilHitung');
+    if (el) {
+        const a = 10, b = 5;
+        el.innerHTML = 'Hasil: ' + a + ' + ' + b + ' = ' + (a + b);
+        el.style.color = '#8be9fd';
     }
 }
 
-// ============================================
-// SCROLL ANIMASI
-// ============================================
-document.addEventListener('DOMContentLoaded', function() {
-    const babSections = document.querySelectorAll('.bab');
-    babSections.forEach(function(section, index) {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(24px)';
-        section.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-
-        setTimeout(function() {
-            section.style.opacity = '1';
-            section.style.transform = 'translateY(0)';
-        }, 120 + (index * 100));
-    });
-});
-
-// ============================================
-// CONSOLE WELCOME
-// ============================================
-console.log('Belajar Pemrograman Dari Nol');
+// CONSOLE
+console.log('Belajar RPL dari Nol');
 console.log('10 Bab siap dipelajari');
-console.log('Selamat belajar!');
