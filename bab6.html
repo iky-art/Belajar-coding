@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 6 - Variabel & Tipe Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">BelajarDariNol</span>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">☰</button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="bab1.html">1. Logika</a></li>
+                <li><a href="bab2.html">2. Algoritma</a></li>
+                <li><a href="bab3.html">3. HTML Dasar</a></li>
+                <li><a href="bab4.html">4. CSS Dasar</a></li>
+                <li><a href="bab5.html">5. JavaScript</a></li>
+                <li><a href="bab6.html" class="active">6. Variabel</a></li>
+                <li><a href="bab7.html">7. Percabangan</a></li>
+                <li><a href="bab8.html">8. Perulangan</a></li>
+                <li><a href="bab9.html">9. PBO</a></li>
+                <li><a href="bab10.html">10. Database</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== BAB 6: VARIABEL ========== -->
+    <section class="bab bab-full bab-alt">
+        <div class="container">
+            <div class="bab-header">
+                <span class="bab-number">06</span>
+                <h2>Variabel & Tipe Data</h2>
+                <div class="bab-nav">
+                    <a href="bab5.html" class="btn btn-small">← Bab 5</a>
+                    <a href="index.html" class="btn btn-small">🏠 Home</a>
+                    <a href="bab7.html" class="btn btn-small btn-primary">Bab 7 →</a>
+                </div>
+            </div>
+            
+            <div class="bab-content">
+                <div class="materi-box">
+                    <h3>📦 Variabel = Kotak Penyimpanan</h3>
+                    <p>
+                        <strong>Variabel</strong> adalah tempat menyimpan data di memori komputer.
+                        Kayak <strong>kotak</strong> yang bisa diisi berbagai macam barang.
+                        Setiap kotak punya <strong>nama</strong> dan <strong>isi</strong>.
+                    </p>
+                    
+                    <div class="contoh-box">
+                        <h4>📌 Analogi Variabel</h4>
+                        <ul>
+                            <li><strong>Kotak</strong> = Variabel</li>
+                            <li><strong>Label nama</strong> = Nama variabel</li>
+                            <li><strong>Isi kotak</strong> = Nilai/data</li>
+                            <li><strong>Jenis barang</strong> = Tipe data</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contoh-box">
+                        <h4>📌 Tipe Data Dasar di Java</h4>
+                        <table class="tag-table">
+                            <tr><th>Tipe Data</th><th>Fungsi</th><th>Contoh Nilai</th><th>Ukuran</th></tr>
+                            <tr><td><strong>String</strong></td><td>Teks</td><td>"Budi", "Halo", "RPL"</td><td>-</td></tr>
+                            <tr><td><strong>int</strong></td><td>Angka bulat</td><td>10, -5, 0, 1000</td><td>4 byte</td></tr>
+                            <tr><td><strong>double</strong></td><td>Angka desimal</td><td>3.14, 0.5, -2.7</td><td>8 byte</td></tr>
+                            <tr><td><strong>boolean</strong></td><td>Benar/Salah</td><td>true, false</td><td>1 bit</td></tr>
+                            <tr><td><strong>char</strong></td><td>Satu huruf</td><td>'A', 'z', '5'</td><td>2 byte</td></tr>
+                        </table>
+                    </div>
+                    
+                    <div class="contoh-box">
+                        <h4>💻 Cara Membuat Variabel</h4>
+                        <div class="code-block">
+                            <span class="comment">// Format: tipeData namaVariabel = nilai;</span><br><br>
+                            
+                            <span class="comment">// String (teks) - pakai tanda petik dua</span><br>
+                            <span class="keyword">String</span> namaSiswa = <span class="string">"Budi Santoso"</span>;<br>
+                            <span class="keyword">String</span> alamat = <span class="string">"Jl. Mawar No. 10"</span>;<br><br>
+                            
+                            <span class="comment">// int (angka bulat) - tanpa tanda petik</span><br>
+                            <span class="keyword">int</span> umur = 17;<br>
+                            <span class="keyword">int</span> jumlahSaudara = 2;<br><br>
+                            
+                            <span class="comment">// double (angka desimal)</span><br>
+                            <span class="keyword">double</span> tinggiBadan = 168.5;<br>
+                            <span class="keyword">double</span> ipk = 3.85;<br><br>
+                            
+                            <span class="comment">// boolean (benar/salah)</span><br>
+                            <span class="keyword">boolean</span> isAktif = <span class="keyword">true</span>;<br>
+                            <span class="keyword">boolean</span> isLulus = <span class="keyword">false</span>;<br><br>
+                            
+                            <span class="comment">// char (satu huruf) - pakai tanda petik satu</span><br>
+                            <span class="keyword">char</span> grade = <span class="string">'A'</span>;<br>
+                            <span class="keyword">char</span> jenisKelamin = <span class="string">'L'</span>;
+                        </div>
+                    </div>
+                    
+                    <div class="contoh-box">
+                        <h4>💻 Menampilkan Isi Variabel</h4>
+                        <div class="code-block">
+                            <span class="comment">// Menampilkan variabel ke layar</span><br>
+                            <span class="output">System.out.println</span>(<span class="string">"Nama: "</span> + namaSiswa);<br>
+                            <span class="output">System.out.println</span>(<span class="string">"Umur: "</span> + umur + <span class="string">" tahun"</span>);<br>
+                            <span class="output">System.out.println</span>(<span class="string">"Tinggi: "</span> + tinggiBadan + <span class="string">" cm"</span>);<br>
+                            <span class="output">System.out.println</span>(<span class="string">"Aktif: "</span> + isAktif);<br>
+                            <span class="output">System.out.println</span>(<span class="string">"Grade: "</span> + grade);
+                            
+                            <br><br>
+                            <span class="comment">// Output yang dihasilkan:</span><br>
+                            <span class="comment">// Nama: Budi Santoso</span><br>
+                            <span class="comment">// Umur: 17 tahun</span><br>
+                            <span class="comment">// Tinggi: 168.5 cm</span><br>
+                            <span class="comment">// Aktif: true</span><br>
+                            <span class="comment">// Grade: A</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contoh-box">
+                        <h4>📌 Aturan Penamaan Variabel</h4>
+                        <ul>
+                            <li>Harus dimulai dengan <strong>huruf</strong> atau <strong>garis bawah (_)</strong></li>
+                            <li>Boleh mengandung <strong>angka</strong>, tapi tidak boleh di awal</li>
+                            <li>Gunakan <strong>camelCase</strong>: <code>namaSiswa</code>, <code>totalNilai</code></li>
+                            <li>Nama variabel <strong>case sensitive</strong>: <code>nama</code> ≠ <code>Nama</code></li>
+                            <li>Jangan pakai <strong>kata kunci</strong> Java: <code>class</code>, <code>public</code>, <code>static</code></li>
+                        </ul>
+                        
+                        <div class="code-block" style="margin-top:10px;">
+                            <span class="comment">// Contoh PENAMAAN YANG SALAH</span><br>
+                            <span class="comment">// int 1nama = 10;  // ❌ Tidak boleh dimulai angka</span><br>
+                            <span class="comment">// int class = 5;    // ❌ Kata kunci Java</span><br>
+                            <span class="comment">// String nama-siswa = "Budi"; // ❌ Pakai strip (-)</span><br><br>
+                            
+                            <span class="comment">// Contoh PENAMAAN YANG BENAR</span><br>
+                            <span class="keyword">int</span> nama1 = 10;     <span class="comment">// ✅ Boleh ada angka di akhir</span><br>
+                            <span class="keyword">int</span> _nilai = 5;      <span class="comment">// ✅ Boleh diawali garis bawah</span><br>
+                            <span class="keyword">String</span> namaSiswa = <span class="string">"Budi"</span>; <span class="comment">// ✅ camelCase</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contoh-box">
+                        <h4>📊 Konversi Tipe Data</h4>
+                        <p>Kadang kita perlu mengubah satu tipe data ke tipe lain:</p>
+                        <div class="code-block">
+                            <span class="comment">// Konversi dari int ke double (otomatis)</span><br>
+                            <span class="keyword">int</span> angkaBulat = 10;<br>
+                            <span class="keyword">double</span> angkaDesimal = angkaBulat; <span class="comment">// 10.0</span><br><br>
+                            
+                            <span class="comment">// Konversi dari double ke int (harus dipaksa)</span><br>
+                            <span class="keyword">double</span> nilaiDesimal = 3.7;<br>
+                            <span class="keyword">int</span> nilaiBulat = (<span class="keyword">int</span>) nilaiDesimal; <span class="comment">// 3 (desimal dihilangkan)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-box">
+                        <h4>✏️ Latihan Variabel</h4>
+                        <p>Buatlah variabel untuk menyimpan:</p>
+                        <p class="quiz-soal">"Nama lengkap, umur, tinggi badan, dan status menikah"</p>
+                        <button class="btn btn-small btn-info" onclick="tampilkanJawaban('jawaban6')">Lihat Jawaban</button>
+                        <div id="jawaban6" class="jawaban" style="display:none;">
+                            <div class="code-block">
+                                <span class="keyword">String</span> namaLengkap = <span class="string">"Budi Santoso"</span>;<br>
+                                <span class="keyword">int</span> umur = 17;<br>
+                                <span class="keyword">double</span> tinggiBadan = 168.5;<br>
+                                <span class="keyword">boolean</span> isMenikah = <span class="keyword">false</span>;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ========== BOTTOM NAV ========== -->
+            <div class="bottom-nav">
+                <a href="bab5.html" class="btn">← Bab 5: JavaScript</a>
+                <a href="index.html" class="btn">🏠 Home</a>
+                <a href="bab7.html" class="btn btn-primary">Bab 7: Percabangan →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Belajar Dari Nol - Untuk Siswa RPL Kelas 11</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+                              </html>
