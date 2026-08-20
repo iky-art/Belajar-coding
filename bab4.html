@@ -10,16 +10,22 @@
 
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <span class="logo-icon">🚀</span>
-                <span class="logo-text">BelajarDariNol</span>
-            </div>
-            <button class="nav-toggle" id="navToggle">☰</button>
+            <a href="index.html" class="logo">
+                <span class="logo-icon">R</span>
+                <span class="logo-text">Belajar<span>RPL</span></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle">
+                <span class="garis"></span>
+                <span class="garis"></span>
+                <span class="garis"></span>
+            </button>
+
             <ul class="nav-menu" id="navMenu">
                 <li><a href="bab1.html">1. Logika</a></li>
                 <li><a href="bab2.html">2. Algoritma</a></li>
-                <li><a href="bab3.html">3. HTML Dasar</a></li>
-                <li><a href="bab4.html" class="active">4. CSS Dasar</a></li>
+                <li><a href="bab3.html">3. HTML</a></li>
+                <li><a href="bab4.html" class="active">4. CSS</a></li>
                 <li><a href="bab5.html">5. JavaScript</a></li>
                 <li><a href="bab6.html">6. Variabel</a></li>
                 <li><a href="bab7.html">7. Percabangan</a></li>
@@ -30,104 +36,106 @@
         </div>
     </nav>
 
-    <section class="bab bab-full">
+    <section class="bab">
         <div class="container">
             <div class="bab-header">
                 <span class="bab-number">04</span>
-                <h2>CSS Dasar (Mempercantik)</h2>
+                <h2>CSS Dasar</h2>
                 <div class="bab-nav">
                     <a href="bab3.html" class="btn btn-small">← Bab 3</a>
-                    <a href="index.html" class="btn btn-small">🏠 Home</a>
+                    <a href="index.html" class="btn btn-small">Home</a>
                     <a href="bab5.html" class="btn btn-small btn-primary">Bab 5 →</a>
                 </div>
             </div>
-            
+
             <div class="bab-content">
                 <div class="materi-box">
-                    <h3>🎨 CSS = Makeup Website</h3>
+                    <h3>Apa Itu CSS?</h3>
                     <p>
-                        <strong>CSS</strong> (Cascading Style Sheets) digunakan untuk 
-                        <strong>mempercantik tampilan</strong> website. Kayak <strong>baju</strong> dan <strong>makeup</strong>!
+                        CSS itu <strong>Cascading Style Sheets</strong>. 
+                        Dipakai buat mempercantik tampilan website. 
+                        Kalau HTML itu kerangka, CSS itu cat dan dekorasinya.
                     </p>
-                    
+
                     <div class="contoh-box">
-                        <h4>📌 Cara Menulis CSS</h4>
+                        <h4>Cara Nulis CSS</h4>
                         <div class="code-block">
-                            <span class="comment">/* Cara 1: Di dalam tag style */</span><br>
-                            <span class="tag">&lt;style&gt;</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="selector">body</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">#f0f0f0</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <span class="comment">/* Di dalam tag style */</span>
+                            <span class="tag">&lt;style&gt;</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="selector">body</span> {
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">#f0f0f0</span>;
+                            &nbsp;&nbsp;&nbsp;&nbsp;}
                             <span class="tag">&lt;/style&gt;</span>
-                            
-                            <br><br>
-                            <span class="comment">/* Cara 2: Di file terpisah (style.css) */</span><br>
-                            <span class="selector">h1</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">color</span>: <span class="value">blue</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">font-size</span>: <span class="value">32px</span>;<br>
+
+                            <span class="comment">/* Atau di file terpisah */</span>
+                            <span class="selector">h1</span> {
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">color</span>: <span class="value">blue</span>;
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">font-size</span>: <span class="value">32px</span>;
                             }
                         </div>
                     </div>
-                    
+
                     <div class="contoh-box">
-                        <h4>🎯 Property CSS Dasar</h4>
+                        <h4>Property CSS Dasar</h4>
                         <table class="tag-table">
-                            <tr><th>Property</th><th>Fungsi</th><th>Nilai Contoh</th></tr>
-                            <tr><td>color</td><td>Warna teks</td><td>red, #ff0000, rgb(255,0,0)</td></tr>
-                            <tr><td>background-color</td><td>Warna latar</td><td>blue, #0000ff</td></tr>
-                            <tr><td>font-size</td><td>Ukuran teks</td><td>16px, 2em, 1.5rem</td></tr>
-                            <tr><td>margin</td><td>Jarak luar</td><td>10px, auto, 10px 20px</td></tr>
-                            <tr><td>padding</td><td>Jarak dalam</td><td>15px, 5%</td></tr>
-                            <tr><td>border</td><td>Garis tepi</td><td>1px solid black</td></tr>
-                            <tr><td>text-align</td><td>Rata teks</td><td>center, left, right</td></tr>
-                            <tr><td>font-weight</td><td>Tebal teks</td><td>bold, normal, 700</td></tr>
+                            <tr>
+                                <th>Property</th>
+                                <th>Fungsi</th>
+                                <th>Contoh Nilai</th>
+                            </tr>
+                            <tr>
+                                <td>color</td>
+                                <td>Warna teks</td>
+                                <td>red, #ff0000</td>
+                            </tr>
+                            <tr>
+                                <td>background-color</td>
+                                <td>Warna latar</td>
+                                <td>blue, #0000ff</td>
+                            </tr>
+                            <tr>
+                                <td>font-size</td>
+                                <td>Ukuran teks</td>
+                                <td>16px, 2em</td>
+                            </tr>
+                            <tr>
+                                <td>margin</td>
+                                <td>Jarak luar</td>
+                                <td>10px, auto</td>
+                            </tr>
+                            <tr>
+                                <td>padding</td>
+                                <td>Jarak dalam</td>
+                                <td>15px</td>
+                            </tr>
+                            <tr>
+                                <td>border</td>
+                                <td>Garis tepi</td>
+                                <td>1px solid black</td>
+                            </tr>
                         </table>
                     </div>
-                    
-                    <div class="contoh-box">
-                        <h4>💻 Contoh CSS Lengkap</h4>
-                        <div class="code-block">
-                            <span class="comment">/* Style untuk semua h1 */</span><br>
-                            <span class="selector">h1</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">color</span>: <span class="value">#2d3748</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">font-size</span>: <span class="value">36px</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">text-align</span>: <span class="value">center</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">margin-bottom</span>: <span class="value">20px</span>;<br>
-                            }<br><br>
-                            
-                            <span class="comment">/* Style untuk class .btn */</span><br>
-                            <span class="selector">.btn</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">background</span>: <span class="value">#4fc3f7</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">color</span>: <span class="value">white</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">padding</span>: <span class="value">10px 20px</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">border</span>: <span class="value">none</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">border-radius</span>: <span class="value">30px</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">cursor</span>: <span class="value">pointer</span>;<br>
-                            }
-                        </div>
-                    </div>
-                    
+
                     <div class="quiz-box">
-                        <h4>✏️ Latihan CSS</h4>
-                        <p>Buatlah CSS untuk:</p>
-                        <p class="quiz-soal">"Buat h1 berwarna biru, ukuran 40px, dan rata tengah"</p>
+                        <h4>Latihan</h4>
+                        <p>Buat CSS untuk:</p>
+                        <p class="quiz-soal">"Buat semua h1 berwarna biru dan ukuran 40px"</p>
                         <button class="btn btn-small btn-info" onclick="tampilkanJawaban('jawaban4')">Lihat Jawaban</button>
                         <div id="jawaban4" class="jawaban" style="display:none;">
                             <div class="code-block">
-                                <span class="selector">h1</span> {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">color</span>: <span class="value">blue</span>;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">font-size</span>: <span class="value">40px</span>;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">text-align</span>: <span class="value">center</span>;<br>
+                                <span class="selector">h1</span> {
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">color</span>: <span class="value">blue</span>;
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">font-size</span>: <span class="value">40px</span>;
                                 }
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="bottom-nav">
                 <a href="bab3.html" class="btn">← Bab 3: HTML</a>
-                <a href="index.html" class="btn">🏠 Home</a>
+                <a href="index.html" class="btn">Home</a>
                 <a href="bab5.html" class="btn btn-primary">Bab 5: JavaScript →</a>
             </div>
         </div>
@@ -135,7 +143,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 Belajar Dari Nol - Untuk Siswa RPL Kelas 11</p>
+            <p>© 2026 Belajar RPL - Buat siswa kelas 11</p>
         </div>
     </footer>
 
