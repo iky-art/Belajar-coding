@@ -1018,3 +1018,165 @@ body {
     outline: 2px solid #6c5ce7;
     outline-offset: 2px;
 }
+
+/* ============================================
+   STATISTIK SECTION (INDEX)
+   ============================================ */
+.stats-section {
+    padding: 50px 0;
+    background: #f8f9fd;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 14px;
+    padding: 28px 20px;
+    text-align: center;
+    border: 1px solid #e8e8f0;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    border-color: #6c5ce7;
+}
+
+.stat-number {
+    display: block;
+    font-size: 32px;
+    font-weight: 800;
+    color: #6c5ce7;
+    line-height: 1.2;
+}
+
+.stat-label {
+    display: block;
+    font-size: 14px;
+    color: #7a7a9a;
+    margin-top: 4px;
+}
+
+/* ============================================
+   TENTANG SECTION (INDEX)
+   ============================================ */
+.tentang {
+    padding: 60px 0;
+    background: white;
+}
+
+.tentang-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tentang-content > p {
+    font-size: 17px;
+    color: #4a4a6a;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.tentang-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.feature {
+    background: #f8f9fd;
+    border-radius: 14px;
+    padding: 28px 20px;
+    border: 1px solid #e8e8f0;
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    border-color: #6c5ce7;
+    box-shadow: 0 4px 20px rgba(108, 92, 231, 0.06);
+}
+
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #6c5ce7;
+    color: white;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.feature h4 {
+    font-size: 16px;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #7a7a9a;
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE UNTUK INDEX
+   ============================================ */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .tentang-features {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .stat-card {
+        padding: 20px 16px;
+    }
+
+    .stat-number {
+        font-size: 26px;
+    }
+
+    .tentang-content > p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 16px 12px;
+    }
+
+    .stat-number {
+        font-size: 22px;
+    }
+
+    .stat-label {
+        font-size: 12px;
+    }
+
+    .feature {
+        padding: 20px 16px;
+    }
+}
