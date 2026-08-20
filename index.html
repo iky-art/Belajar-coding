@@ -11,18 +11,22 @@
     <!-- ========== NAVBAR ========== -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <span class="logo-icon">🚀</span>
-                <span class="logo-text">BelajarDariNol</span>
-            </div>
-            
-            <button class="nav-toggle" id="navToggle">☰</button>
-            
+            <a href="index.html" class="logo">
+                <span class="logo-icon">R</span>
+                <span class="logo-text">Belajar<span>DariNol</span></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
             <ul class="nav-menu" id="navMenu">
                 <li><a href="bab1.html">1. Logika</a></li>
                 <li><a href="bab2.html">2. Algoritma</a></li>
-                <li><a href="bab3.html">3. HTML Dasar</a></li>
-                <li><a href="bab4.html">4. CSS Dasar</a></li>
+                <li><a href="bab3.html">3. HTML</a></li>
+                <li><a href="bab4.html">4. CSS</a></li>
                 <li><a href="bab5.html">5. JavaScript</a></li>
                 <li><a href="bab6.html">6. Variabel</a></li>
                 <li><a href="bab7.html">7. Percabangan</a></li>
@@ -37,10 +41,10 @@
     <header class="hero">
         <div class="container">
             <h1>Belajar Pemrograman <span>Dari Nol</span></h1>
-            <p>Mulai dari mana? Mulai dari LOGIKA! <br> Ikuti langkah demi langkah sampai bisa membuat program.</p>
+            <p>Mulai dari mana? Mulai dari LOGIKA! Ikuti langkah demi langkah sampai bisa membuat program.</p>
             <div class="hero-buttons">
-                <a href="bab1.html" class="btn btn-primary">Mulai Belajar ➜</a>
-                <a href="#daftar-bab" class="btn btn-outline">Lihat Semua Bab ↓</a>
+                <a href="bab1.html" class="btn btn-primary">Mulai Belajar</a>
+                <a href="#daftar-bab" class="btn btn-outline">Lihat Semua Bab</a>
             </div>
         </div>
     </header>
@@ -48,17 +52,17 @@
     <!-- ========== DAFTAR BAB ========== -->
     <section id="daftar-bab" class="daftar-bab">
         <div class="container">
-            <h2 class="section-title">📚 Daftar Materi</h2>
+            <h2 class="section-title">Daftar Materi</h2>
             <div class="bab-list">
                 <a href="bab1.html" class="bab-item">
                     <span class="bab-nomor">01</span>
-                    <span class="bab-nama">Apa Itu Logika?</span>
+                    <span class="bab-nama">Logika Dasar</span>
                     <span class="bab-desk">Dasar berpikir komputasi</span>
                     <span class="bab-arrow">→</span>
                 </a>
                 <a href="bab2.html" class="bab-item">
                     <span class="bab-nomor">02</span>
-                    <span class="bab-nama">Apa Itu Algoritma?</span>
+                    <span class="bab-nama">Algoritma Dasar</span>
                     <span class="bab-desk">Langkah-langkah menyelesaikan masalah</span>
                     <span class="bab-arrow">→</span>
                 </a>
@@ -114,16 +118,71 @@
         </div>
     </section>
 
+    <!-- ========== STATISTIK ========== -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Bab Materi</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Contoh Kode</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Latihan Soal</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Gratis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TENTANG ========== -->
+    <section class="tentang">
+        <div class="container">
+            <h2 class="section-title">Tentang Website Ini</h2>
+            <div class="tentang-content">
+                <p>
+                    Website ini dibuat khusus untuk siswa <strong>RPL Kelas 11</strong> 
+                    yang ingin belajar pemrograman dari dasar. Materi disusun secara 
+                    bertahap dari yang paling mudah sampai siap membuat program.
+                </p>
+                <div class="tentang-features">
+                    <div class="feature">
+                        <span class="feature-icon">1</span>
+                        <h4>Mudah Dipahami</h4>
+                        <p>Bahasa sederhana dengan banyak contoh</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">2</span>
+                        <h4>Belajar Aktif</h4>
+                        <p>Ada latihan dan jawaban untuk praktik</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">3</span>
+                        <h4>Gratis Selamanya</h4>
+                        <p>Bisa diakses kapan saja, di mana saja</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container">
             <p>© 2026 Belajar Dari Nol - Untuk Siswa RPL Kelas 11</p>
-            <p style="font-size:14px; margin-top:10px; opacity:0.7;">
-                Dibuat dengan ❤️ - Mulai dari logika, sampai bisa bikin program!
+            <p style="font-size:14px; margin-top:8px; opacity:0.6;">
+                Dibuat dengan <span style="color:#ff6b6b;">♥</span> untuk siswa Indonesia
             </p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-                  </html>
+                    </html>
