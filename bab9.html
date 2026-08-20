@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bab 9 - PBO (Class & Object)</title>
+    <title>Bab 9 - PBO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ========== NAVBAR ========== -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <span class="logo-icon">🚀</span>
-                <span class="logo-text">BelajarDariNol</span>
-            </div>
-            
-            <button class="nav-toggle" id="navToggle">☰</button>
-            
+            <a href="index.html" class="logo">
+                <span class="logo-icon">R</span>
+                <span class="logo-text">Belajar<span>RPL</span></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle">
+                <span class="garis"></span>
+                <span class="garis"></span>
+                <span class="garis"></span>
+            </button>
+
             <ul class="nav-menu" id="navMenu">
                 <li><a href="bab1.html">1. Logika</a></li>
                 <li><a href="bab2.html">2. Algoritma</a></li>
-                <li><a href="bab3.html">3. HTML Dasar</a></li>
-                <li><a href="bab4.html">4. CSS Dasar</a></li>
+                <li><a href="bab3.html">3. HTML</a></li>
+                <li><a href="bab4.html">4. CSS</a></li>
                 <li><a href="bab5.html">5. JavaScript</a></li>
                 <li><a href="bab6.html">6. Variabel</a></li>
                 <li><a href="bab7.html">7. Percabangan</a></li>
@@ -33,200 +36,111 @@
         </div>
     </nav>
 
-    <!-- ========== BAB 9: PBO ========== -->
-    <section class="bab bab-full">
+    <section class="bab">
         <div class="container">
             <div class="bab-header">
                 <span class="bab-number">09</span>
                 <h2>PBO (Class & Object)</h2>
                 <div class="bab-nav">
                     <a href="bab8.html" class="btn btn-small">← Bab 8</a>
-                    <a href="index.html" class="btn btn-small">🏠 Home</a>
+                    <a href="index.html" class="btn btn-small">Home</a>
                     <a href="bab10.html" class="btn btn-small btn-primary">Bab 10 →</a>
                 </div>
             </div>
-            
+
             <div class="bab-content">
                 <div class="materi-box">
-                    <h3>🏗️ PBO = Cetakan & Hasil Cetakan</h3>
+                    <h3>Apa Itu PBO?</h3>
                     <p>
-                        <strong>PBO</strong> (Pemrograman Berorientasi Objek) adalah 
-                        cara membuat program dengan <strong>class</strong> (cetakan) 
-                        dan <strong>object</strong> (hasil cetakan).
+                        PBO itu <strong>Pemrograman Berorientasi Objek</strong>. 
+                        Intinya ada <strong>Class</strong> (cetakan) dan <strong>Object</strong> (hasil cetakan).
                     </p>
-                    
+                    <p>
+                        Bayangin cetakan kue. Class itu cetakannya, Object itu kue yang udah jadi.
+                        Dari satu cetakan bisa bikin banyak kue.
+                    </p>
+
                     <div class="contoh-box">
-                        <h4>📌 Analogi Class & Object</h4>
-                        <ul>
-                            <li><strong>Class</strong> = Cetakan kue (resep)</li>
-                            <li><strong>Object</strong> = Kue yang sudah jadi</li>
-                            <li>Dari 1 cetakan bisa dibuat <strong>banyak</strong> kue</li>
-                            <li>Setiap kue punya <strong>rasa</strong> dan <strong>bentuk</strong> yang sama</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="contoh-box">
-                        <h4>📌 Struktur Class di Java</h4>
+                        <h4>Class Sederhana</h4>
                         <div class="code-block">
-                            <span class="keyword">class</span> <span class="class-name">NamaClass</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// 1. Atribut (data / properti)</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">String</span> nama;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> umur;<br><br>
-                            
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// 2. Constructor (pembuat object)</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="class-name">NamaClass</span>(<span class="keyword">String</span> nama, <span class="keyword">int</span> umur) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.nama = nama;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.umur = umur;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
-                            
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// 3. Method (perilaku / fungsi)</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span> tampilkan() {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Nama: "</span> + nama);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Umur: "</span> + umur);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <span class="keyword">class</span> <span class="class-name">Siswa</span> {
+                                <span class="comment">// Atribut</span>
+                                <span class="keyword">String</span> nama;
+                                <span class="keyword">int</span> umur;
+
+                                <span class="comment">// Constructor</span>
+                                <span class="class-name">Siswa</span>(<span class="keyword">String</span> nama, <span class="keyword">int</span> umur) {
+                                    <span class="keyword">this</span>.nama = nama;
+                                    <span class="keyword">this</span>.umur = umur;
+                                }
+
+                                <span class="comment">// Method</span>
+                                <span class="keyword">void</span> perkenalan() {
+                                    <span class="output">System.out.println</span>(<span class="string">"Halo, saya "</span> + nama);
+                                }
                             }
                         </div>
                     </div>
-                    
+
                     <div class="contoh-box">
-                        <h4>💻 Contoh Class Sederhana: Siswa</h4>
+                        <h4>Bikin Object</h4>
                         <div class="code-block">
-                            <span class="comment">// 1. Buat Class</span><br>
-                            <span class="keyword">class</span> <span class="class-name">Siswa</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Atribut</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">String</span> nama;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> umur;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">String</span> kelas;<br><br>
-                            
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Constructor</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="class-name">Siswa</span>(<span class="keyword">String</span> nama, <span class="keyword">int</span> umur, <span class="keyword">String</span> kelas) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.nama = nama;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.umur = umur;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.kelas = kelas;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
-                            
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Method</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span> perkenalan() {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Halo, saya "</span> + nama);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Umur "</span> + umur + <span class="string">" tahun"</span>);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Kelas "</span> + kelas);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <span class="comment">// Buat object dari class Siswa</span>
+                            <span class="class-name">Siswa</span> budi = <span class="keyword">new</span> <span class="class-name">Siswa</span>(<span class="string">"Budi"</span>, 17);
+                            budi.perkenalan();
+                            <span class="comment">// Output: Halo, saya Budi</span>
+
+                            <span class="class-name">Siswa</span> ani = <span class="keyword">new</span> <span class="class-name">Siswa</span>(<span class="string">"Ani"</span>, 16);
+                            ani.perkenalan();
+                            <span class="comment">// Output: Halo, saya Ani</span>
+                        </div>
+                    </div>
+
+                    <div class="contoh-box">
+                        <h4>Method dengan Return</h4>
+                        <div class="code-block">
+                            <span class="keyword">class</span> <span class="class-name">Calculator</span> {
+                                <span class="keyword">int</span> tambah(<span class="keyword">int</span> a, <span class="keyword">int</span> b) {
+                                    <span class="keyword">return</span> a + b;
+                                }
                             }
+
+                            <span class="class-name">Calculator</span> calc = <span class="keyword">new</span> <span class="class-name">Calculator</span>();
+                            <span class="keyword">int</span> hasil = calc.tambah(10, 5);
+                            <span class="output">System.out.println</span>(hasil); <span class="comment">// Output: 15</span>
                         </div>
                     </div>
-                    
-                    <div class="contoh-box">
-                        <h4>🔨 Membuat Object dari Class</h4>
-                        <div class="code-block">
-                            <span class="comment">// 2. Buat Object di main()</span><br>
-                            <span class="keyword">public class</span> <span class="class-name">Main</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public static void</span> main(<span class="keyword">String</span>[] args) {<br><br>
-                            
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Buat object siswa1</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="class-name">Siswa</span> siswa1 = <span class="keyword">new</span> <span class="class-name">Siswa</span>(<span class="string">"Budi"</span>, 17, <span class="string">"XI-RPL"</span>);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;siswa1.perkenalan();<br><br>
-                            
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Buat object siswa2</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="class-name">Siswa</span> siswa2 = <span class="keyword">new</span> <span class="class-name">Siswa</span>(<span class="string">"Ani"</span>, 16, <span class="string">"XI-RPL"</span>);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;siswa2.perkenalan();<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                            }
-                            
-                            <br><br>
-                            <span class="comment">// Output:</span><br>
-                            <span class="comment">// Halo, saya Budi</span><br>
-                            <span class="comment">// Umur 17 tahun</span><br>
-                            <span class="comment">// Kelas XI-RPL</span><br>
-                            <span class="comment">// Halo, saya Ani</span><br>
-                            <span class="comment">// Umur 16 tahun</span><br>
-                            <span class="comment">// Kelas XI-RPL</span>
-                        </div>
-                    </div>
-                    
-                    <div class="contoh-box">
-                        <h4>📌 Method dengan Return Value</h4>
-                        <p>Method bisa mengembalikan nilai (bukan hanya mencetak):</p>
-                        <div class="code-block">
-                            <span class="keyword">class</span> <span class="class-name">Calculator</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Method dengan return (mengembalikan nilai)</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> tambah(<span class="keyword">int</span> a, <span class="keyword">int</span> b) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> a + b;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
-                            
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> kurang(<span class="keyword">int</span> a, <span class="keyword">int</span> b) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> a - b;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                            }<br><br>
-                            
-                            <span class="comment">// Penggunaan di main()</span><br>
-                            <span class="class-name">Calculator</span> calc = <span class="keyword">new</span> <span class="class-name">Calculator</span>();<br>
-                            <span class="keyword">int</span> hasil = calc.tambah(10, 5);<br>
-                            <span class="output">System.out.println</span>(<span class="string">"Hasil: "</span> + hasil); <span class="comment">// Output: 15</span>
-                        </div>
-                    </div>
-                    
-                    <div class="contoh-box">
-                        <h4>📌 Encapsulation (Private & Getter/Setter)</h4>
-                        <p>Data dalam class bisa dibuat <strong>private</strong> (hanya bisa diakses dari dalam class) dan diakses melalui <strong>getter/setter</strong>.</p>
-                        <div class="code-block">
-                            <span class="keyword">class</span> <span class="class-name">Account</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Atribut private</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private String</span> nama;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">private double</span> saldo;<br><br>
-                            
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Constructor</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="class-name">Account</span>(<span class="keyword">String</span> nama, <span class="keyword">double</span> saldo) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.nama = nama;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.saldo = saldo;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
-                            
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Getter (mengambil data)</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public String</span> getNama() {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> nama;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
-                            
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Setter (mengubah data)</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public void</span> setNama(<span class="keyword">String</span> nama) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.nama = nama;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                            }
-                        </div>
-                    </div>
-                    
+
                     <div class="quiz-box">
-                        <h4>✏️ Latihan PBO</h4>
-                        <p>Buatlah class untuk:</p>
-                        <p class="quiz-soal">"Class Buku dengan atribut: judul, penulis, tahunTerbit dan method: tampilkanInfo()"</p>
+                        <h4>Latihan</h4>
+                        <p>Buat class untuk:</p>
+                        <p class="quiz-soal">"Class Buku dengan judul, penulis, dan method tampilkanInfo()"</p>
                         <button class="btn btn-small btn-info" onclick="tampilkanJawaban('jawaban9')">Lihat Jawaban</button>
                         <div id="jawaban9" class="jawaban" style="display:none;">
                             <div class="code-block">
-                                <span class="keyword">class</span> <span class="class-name">Buku</span> {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">String</span> judul;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">String</span> penulis;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> tahunTerbit;<br><br>
-                                
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="class-name">Buku</span>(<span class="keyword">String</span> judul, <span class="keyword">String</span> penulis, <span class="keyword">int</span> tahunTerbit) {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.judul = judul;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.penulis = penulis;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.tahunTerbit = tahunTerbit;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
-                                
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">void</span> tampilkanInfo() {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Judul: "</span> + judul);<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Penulis: "</span> + penulis);<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Tahun: "</span> + tahunTerbit);<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                <span class="keyword">class</span> <span class="class-name">Buku</span> {
+                                    <span class="keyword">String</span> judul;
+                                    <span class="keyword">String</span> penulis;
+
+                                    <span class="class-name">Buku</span>(<span class="keyword">String</span> judul, <span class="keyword">String</span> penulis) {
+                                        <span class="keyword">this</span>.judul = judul;
+                                        <span class="keyword">this</span>.penulis = penulis;
+                                    }
+
+                                    <span class="keyword">void</span> tampilkanInfo() {
+                                        <span class="output">System.out.println</span>(<span class="string">"Judul: "</span> + judul);
+                                        <span class="output">System.out.println</span>(<span class="string">"Penulis: "</span> + penulis);
+                                    }
                                 }
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- ========== BOTTOM NAV ========== -->
+
             <div class="bottom-nav">
                 <a href="bab8.html" class="btn">← Bab 8: Perulangan</a>
-                <a href="index.html" class="btn">🏠 Home</a>
+                <a href="index.html" class="btn">Home</a>
                 <a href="bab10.html" class="btn btn-primary">Bab 10: Database →</a>
             </div>
         </div>
@@ -234,10 +148,10 @@
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 Belajar Dari Nol - Untuk Siswa RPL Kelas 11</p>
+            <p>© 2026 Belajar RPL - Buat siswa kelas 11</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-  </html>
+</html>
