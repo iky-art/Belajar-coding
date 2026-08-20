@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bab 7 - Percabangan IF-ELSE</title>
+    <title>Bab 7 - Percabangan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ========== NAVBAR ========== -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <span class="logo-icon">🚀</span>
-                <span class="logo-text">BelajarDariNol</span>
-            </div>
-            
-            <button class="nav-toggle" id="navToggle">☰</button>
-            
+            <a href="index.html" class="logo">
+                <span class="logo-icon">R</span>
+                <span class="logo-text">Belajar<span>RPL</span></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle">
+                <span class="garis"></span>
+                <span class="garis"></span>
+                <span class="garis"></span>
+            </button>
+
             <ul class="nav-menu" id="navMenu">
                 <li><a href="bab1.html">1. Logika</a></li>
                 <li><a href="bab2.html">2. Algoritma</a></li>
-                <li><a href="bab3.html">3. HTML Dasar</a></li>
-                <li><a href="bab4.html">4. CSS Dasar</a></li>
+                <li><a href="bab3.html">3. HTML</a></li>
+                <li><a href="bab4.html">4. CSS</a></li>
                 <li><a href="bab5.html">5. JavaScript</a></li>
                 <li><a href="bab6.html">6. Variabel</a></li>
                 <li><a href="bab7.html" class="active">7. Percabangan</a></li>
@@ -33,175 +36,96 @@
         </div>
     </nav>
 
-    <!-- ========== BAB 7: PERCABANGAN ========== -->
-    <section class="bab bab-full">
+    <section class="bab">
         <div class="container">
             <div class="bab-header">
                 <span class="bab-number">07</span>
                 <h2>Percabangan (IF-ELSE)</h2>
                 <div class="bab-nav">
                     <a href="bab6.html" class="btn btn-small">← Bab 6</a>
-                    <a href="index.html" class="btn btn-small">🏠 Home</a>
+                    <a href="index.html" class="btn btn-small">Home</a>
                     <a href="bab8.html" class="btn btn-small btn-primary">Bab 8 →</a>
                 </div>
             </div>
-            
+
             <div class="bab-content">
                 <div class="materi-box">
-                    <h3>🔀 Percabangan = Mengambil Keputusan</h3>
+                    <h3>Apa Itu Percabangan?</h3>
                     <p>
-                        <strong>Percabangan</strong> digunakan untuk membuat 
-                        <strong>keputusan</strong> dalam program. Kayak memilih 
-                        jalan di persimpangan! Program akan menjalankan kode 
-                        yang berbeda tergantung <strong>kondisi</strong> yang diberikan.
+                        Percabangan dipakai buat bikin keputusan di program. 
+                        Kayak kamu mau pilih jalan A atau B di persimpangan.
                     </p>
-                    
+
                     <div class="contoh-box">
-                        <h4>📌 Struktur IF-ELSE</h4>
+                        <h4>Struktur IF-ELSE</h4>
                         <div class="code-block">
-                            <span class="keyword">if</span> (kondisi) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Kode jika kondisi BENAR</span><br>
-                            } <span class="keyword">else</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Kode jika kondisi SALAH</span><br>
+                            <span class="keyword">if</span> (kondisi) {
+                                <span class="comment">// Kode jalan kalau kondisi benar</span>
+                            } <span class="keyword">else</span> {
+                                <span class="comment">// Kode jalan kalau kondisi salah</span>
                             }
                         </div>
-                        <p style="margin-top:10px;">
-                            <strong>Kondisi</strong> adalah ekspresi yang menghasilkan 
-                            <strong>true</strong> (benar) atau <strong>false</strong> (salah).
-                        </p>
                     </div>
-                    
+
                     <div class="contoh-box">
-                        <h4>📌 Operator Perbandingan</h4>
-                        <table class="tag-table">
-                            <tr><th>Operator</th><th>Arti</th><th>Contoh</th></tr>
-                            <tr><td>==</td><td>Sama dengan</td><td>nilai == 100</td></tr>
-                            <tr><td>!=</td><td>Tidak sama</td><td>nilai != 0</td></tr>
-                            <tr><td>></td><td>Lebih besar</td><td>umur > 17</td></tr>
-                            <tr><td><</td><td>Lebih kecil</td><td>nilai < 75</td></tr>
-                            <tr><td>>=</td><td>Lebih besar atau sama</td><td>nilai >= 75</td></tr>
-                            <tr><td><=</td><td>Lebih kecil atau sama</td><td>nilai <= 100</td></tr>
-                        </table>
-                    </div>
-                    
-                    <div class="contoh-box">
-                        <h4>💻 Contoh IF-ELSE Sederhana</h4>
+                        <h4>Contoh</h4>
                         <div class="code-block">
-                            <span class="keyword">int</span> nilai = 85;<br><br>
-                            
-                            <span class="keyword">if</span> (nilai >= 75) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Selamat! Anda LULUS"</span>);<br>
-                            } <span class="keyword">else</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Mohon ikuti REMEDIAL"</span>);<br>
+                            <span class="keyword">int</span> nilai = 85;
+
+                            <span class="keyword">if</span> (nilai >= 75) {
+                                <span class="output">System.out.println</span>(<span class="string">"Lulus"</span>);
+                            } <span class="keyword">else</span> {
+                                <span class="output">System.out.println</span>(<span class="string">"Remedial"</span>);
                             }
-                            
-                            <br><br>
-                            <span class="comment">// Output: Selamat! Anda LULUS</span>
+                            <span class="comment">// Output: Lulus</span>
                         </div>
                     </div>
-                    
+
                     <div class="contoh-box">
-                        <h4>📌 IF-ELSE IF (Banyak Kondisi)</h4>
-                        <p>Untuk mengecek lebih dari 2 kondisi, gunakan <strong>else if</strong>:</p>
+                        <h4>IF-ELSE IF (Banyak Kondisi)</h4>
                         <div class="code-block">
-                            <span class="keyword">int</span> nilai = 85;<br><br>
-                            
-                            <span class="keyword">if</span> (nilai >= 90) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Grade A - Sangat Baik"</span>);<br>
-                            } <span class="keyword">else if</span> (nilai >= 75) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Grade B - Baik"</span>);<br>
-                            } <span class="keyword">else if</span> (nilai >= 60) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Grade C - Cukup"</span>);<br>
-                            } <span class="keyword">else</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Grade D - Kurang"</span>);<br>
+                            <span class="keyword">int</span> nilai = 85;
+
+                            <span class="keyword">if</span> (nilai >= 90) {
+                                <span class="output">System.out.println</span>(<span class="string">"A"</span>);
+                            } <span class="keyword">else if</span> (nilai >= 75) {
+                                <span class="output">System.out.println</span>(<span class="string">"B"</span>);
+                            } <span class="keyword">else if</span> (nilai >= 60) {
+                                <span class="output">System.out.println</span>(<span class="string">"C"</span>);
+                            } <span class="keyword">else</span> {
+                                <span class="output">System.out.println</span>(<span class="string">"D"</span>);
                             }
-                            
-                            <br><br>
-                            <span class="comment">// Output: Grade B - Baik</span>
+                            <span class="comment">// Output: B</span>
                         </div>
                     </div>
-                    
-                    <div class="contoh-box">
-                        <h4>📌 Operator Logika (&& dan ||)</h4>
-                        <p>Untuk menggabungkan beberapa kondisi:</p>
-                        <table class="tag-table">
-                            <tr><th>Operator</th><th>Arti</th><th>Contoh</th></tr>
-                            <tr><td>&&</td><td>DAN (semua harus benar)</td><td>nilai >= 75 && absen >= 80</td></tr>
-                            <tr><td>||</td><td>ATAU (salah satu benar)</td><td>nilai >= 90 || nilai >= 85</td></tr>
-                            <tr><td>!</td><td>TIDAK (kebalikan)</td><td>!lulus</td></tr>
-                        </table>
-                        
-                        <div class="code-block" style="margin-top:10px;">
-                            <span class="keyword">int</span> nilai = 85;<br>
-                            <span class="keyword">int</span> absen = 90;<br><br>
-                            
-                            <span class="comment">// Cek: nilai >= 75 DAN absen >= 80</span><br>
-                            <span class="keyword">if</span> (nilai >= 75 && absen >= 80) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Lulus dengan baik"</span>);<br>
-                            } <span class="keyword">else</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Tidak lulus"</span>);<br>
-                            }
-                            
-                            <br><br>
-                            <span class="comment">// Output: Lulus dengan baik</span>
-                        </div>
-                    </div>
-                    
-                    <div class="contoh-box">
-                        <h4>📌 Switch Case (Alternatif IF-ELSE)</h4>
-                        <p>Untuk kondisi dengan banyak nilai tetap:</p>
-                        <div class="code-block">
-                            <span class="keyword">int</span> hari = 3;<br>
-                            <span class="keyword">String</span> namaHari;<br><br>
-                            
-                            <span class="keyword">switch</span> (hari) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">case</span> 1:<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;namaHari = <span class="string">"Senin"</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">break</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">case</span> 2:<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;namaHari = <span class="string">"Selasa"</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">break</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">case</span> 3:<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;namaHari = <span class="string">"Rabu"</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">break</span>;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">default</span>:<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;namaHari = <span class="string">"Hari tidak valid"</span>;<br>
-                            }<br><br>
-                            
-                            <span class="output">System.out.println</span>(<span class="string">"Hari: "</span> + namaHari);<br>
-                            <span class="comment">// Output: Hari: Rabu</span>
-                        </div>
-                    </div>
-                    
+
                     <div class="quiz-box">
-                        <h4>✏️ Latihan Percabangan</h4>
-                        <p>Buatlah program dengan:</p>
-                        <p class="quiz-soal">"Jika nilai >= 80 tampilkan 'A', jika >= 70 'B', jika >= 60 'C', selain itu 'D'"</p>
+                        <h4>Latihan</h4>
+                        <p>Buat percabangan untuk:</p>
+                        <p class="quiz-soal">"Jika nilai >= 80 = A, >= 70 = B, >= 60 = C, selain itu D"</p>
                         <button class="btn btn-small btn-info" onclick="tampilkanJawaban('jawaban7')">Lihat Jawaban</button>
                         <div id="jawaban7" class="jawaban" style="display:none;">
                             <div class="code-block">
-                                <span class="keyword">int</span> nilai = 75;<br><br>
-                                
-                                <span class="keyword">if</span> (nilai >= 80) {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"A"</span>);<br>
-                                } <span class="keyword">else if</span> (nilai >= 70) {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"B"</span>);<br>
-                                } <span class="keyword">else if</span> (nilai >= 60) {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"C"</span>);<br>
-                                } <span class="keyword">else</span> {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"D"</span>);<br>
+                                <span class="keyword">int</span> nilai = 75;
+
+                                <span class="keyword">if</span> (nilai >= 80) {
+                                    <span class="output">System.out.println</span>(<span class="string">"A"</span>);
+                                } <span class="keyword">else if</span> (nilai >= 70) {
+                                    <span class="output">System.out.println</span>(<span class="string">"B"</span>);
+                                } <span class="keyword">else if</span> (nilai >= 60) {
+                                    <span class="output">System.out.println</span>(<span class="string">"C"</span>);
+                                } <span class="keyword">else</span> {
+                                    <span class="output">System.out.println</span>(<span class="string">"D"</span>);
                                 }
-                                <span class="comment">// Output: B</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- ========== BOTTOM NAV ========== -->
+
             <div class="bottom-nav">
                 <a href="bab6.html" class="btn">← Bab 6: Variabel</a>
-                <a href="index.html" class="btn">🏠 Home</a>
+                <a href="index.html" class="btn">Home</a>
                 <a href="bab8.html" class="btn btn-primary">Bab 8: Perulangan →</a>
             </div>
         </div>
@@ -209,10 +133,10 @@
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 Belajar Dari Nol - Untuk Siswa RPL Kelas 11</p>
+            <p>© 2026 Belajar RPL - Buat siswa kelas 11</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-  </html>
+</html>
