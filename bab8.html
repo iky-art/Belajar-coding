@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bab 8 - Perulangan (Loop)</title>
+    <title>Bab 8 - Perulangan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ========== NAVBAR ========== -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <span class="logo-icon">🚀</span>
-                <span class="logo-text">BelajarDariNol</span>
-            </div>
-            
-            <button class="nav-toggle" id="navToggle">☰</button>
-            
+            <a href="index.html" class="logo">
+                <span class="logo-icon">R</span>
+                <span class="logo-text">Belajar<span>RPL</span></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle">
+                <span class="garis"></span>
+                <span class="garis"></span>
+                <span class="garis"></span>
+            </button>
+
             <ul class="nav-menu" id="navMenu">
                 <li><a href="bab1.html">1. Logika</a></li>
                 <li><a href="bab2.html">2. Algoritma</a></li>
-                <li><a href="bab3.html">3. HTML Dasar</a></li>
-                <li><a href="bab4.html">4. CSS Dasar</a></li>
+                <li><a href="bab3.html">3. HTML</a></li>
+                <li><a href="bab4.html">4. CSS</a></li>
                 <li><a href="bab5.html">5. JavaScript</a></li>
                 <li><a href="bab6.html">6. Variabel</a></li>
                 <li><a href="bab7.html">7. Percabangan</a></li>
@@ -33,189 +36,98 @@
         </div>
     </nav>
 
-    <!-- ========== BAB 8: PERULANGAN ========== -->
-    <section class="bab bab-full bab-alt">
+    <section class="bab">
         <div class="container">
             <div class="bab-header">
                 <span class="bab-number">08</span>
                 <h2>Perulangan (Loop)</h2>
                 <div class="bab-nav">
                     <a href="bab7.html" class="btn btn-small">← Bab 7</a>
-                    <a href="index.html" class="btn btn-small">🏠 Home</a>
+                    <a href="index.html" class="btn btn-small">Home</a>
                     <a href="bab9.html" class="btn btn-small btn-primary">Bab 9 →</a>
                 </div>
             </div>
-            
+
             <div class="bab-content">
                 <div class="materi-box">
-                    <h3>🔄 Perulangan = Mengulang Tugas</h3>
+                    <h3>Apa Itu Perulangan?</h3>
                     <p>
-                        <strong>Perulangan (Loop)</strong> digunakan untuk 
-                        <strong>mengulang</strong> kode beberapa kali. 
-                        Kayak <strong>mengulang gerakan</strong> di senam atau 
-                        <strong>mengulang bacaan</strong> di sekolah!
+                        Perulangan dipakai buat mengulang-ulang kode beberapa kali. 
+                        Kayak kamu ngulang gerakan senam atau ngulang baca doa.
                     </p>
-                    
+
                     <div class="contoh-box">
-                        <h4>📌 Kapan Butuh Perulangan?</h4>
-                        <ul>
-                            <li>Mencetak angka 1 sampai 100</li>
-                            <li>Menampilkan data siswa satu per satu</li>
-                            <li>Menghitung total semua nilai</li>
-                            <li>Membuat game yang berulang sampai menang</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="contoh-box">
-                        <h4>📌 Struktur FOR</h4>
-                        <p><strong>FOR</strong> digunakan jika kita tahu berapa kali harus mengulang.</p>
+                        <h4>Struktur FOR</h4>
                         <div class="code-block">
-                            <span class="keyword">for</span> (inisialisasi; kondisi; increment) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Kode yang diulang</span><br>
+                            <span class="keyword">for</span> (<span class="keyword">int</span> i = 1; i <= 5; i++) {
+                                <span class="output">System.out.println</span>(<span class="string">"Angka: "</span> + i);
                             }
-                            
-                            <br><br>
-                            <span class="comment">// Contoh: Cetak angka 1 sampai 5</span><br>
-                            <span class="keyword">for</span> (<span class="keyword">int</span> i = 1; i <= 5; i++) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Angka: "</span> + i);<br>
-                            }
-                            
-                            <br><br>
-                            <span class="comment">// Output:</span><br>
-                            <span class="comment">// Angka: 1</span><br>
-                            <span class="comment">// Angka: 2</span><br>
-                            <span class="comment">// Angka: 3</span><br>
-                            <span class="comment">// Angka: 4</span><br>
-                            <span class="comment">// Angka: 5</span>
+                            <span class="comment">// Output: 1, 2, 3, 4, 5</span>
                         </div>
-                        <p style="margin-top:10px;">
-                            <strong>Penjelasan:</strong><br>
-                            • <strong>inisialisasi</strong>: <code>int i = 1</code> (mulai dari 1)<br>
-                            • <strong>kondisi</strong>: <code>i <= 5</code> (ulangi selama i ≤ 5)<br>
-                            • <strong>increment</strong>: <code>i++</code> (tambah 1 setiap kali)
+                        <p style="margin-top:8px; font-size:14px;">
+                            <strong>Penjelasan:</strong> <br>
+                            i = 1 (mulai), i <= 5 (syarat), i++ (tambah 1 setiap kali)
                         </p>
                     </div>
-                    
+
                     <div class="contoh-box">
-                        <h4>📌 Struktur WHILE</h4>
-                        <p><strong>WHILE</strong> digunakan jika kita tidak tahu pasti berapa kali harus mengulang.</p>
+                        <h4>Struktur WHILE</h4>
                         <div class="code-block">
-                            <span class="keyword">while</span> (kondisi) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Kode yang diulang</span><br>
+                            <span class="keyword">int</span> i = 1;
+                            <span class="keyword">while</span> (i <= 5) {
+                                <span class="output">System.out.println</span>(<span class="string">"Angka: "</span> + i);
+                                i++;
                             }
-                            
-                            <br><br>
-                            <span class="comment">// Contoh: Cetak angka 1 sampai 5</span><br>
-                            <span class="keyword">int</span> i = 1;<br>
-                            <span class="keyword">while</span> (i <= 5) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Angka: "</span> + i);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;i++; <span class="comment">// Jangan lupa tambah!</span><br>
-                            }
-                            
-                            <br><br>
-                            <span class="comment">// Output: sama seperti FOR di atas</span>
+                            <span class="comment">// Output: 1, 2, 3, 4, 5</span>
                         </div>
-                        <p style="margin-top:10px;">
-                            ⚠️ <strong>Peringatan!</strong> Jangan lupa menambah <code>i++</code> 
-                            di dalam WHILE, kalau tidak program akan <strong>loop selamanya</strong>!
+                        <p style="margin-top:8px; font-size:14px; color:#e74c3c;">
+                            <strong>Peringatan:</strong> Jangan lupa <code>i++</code>, 
+                            kalau nggak bakal loop selamanya!
                         </p>
                     </div>
-                    
+
                     <div class="contoh-box">
-                        <h4>📌 Struktur DO-WHILE</h4>
-                        <p><strong>DO-WHILE</strong> selalu menjalankan kode <strong>minimal 1 kali</strong>.</p>
-                        <div class="code-block">
-                            <span class="keyword">do</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Kode yang diulang</span><br>
-                            } <span class="keyword">while</span> (kondisi);
-                            
-                            <br><br>
-                            <span class="comment">// Contoh: Cetak angka 1 sampai 5</span><br>
-                            <span class="keyword">int</span> i = 1;<br>
-                            <span class="keyword">do</span> {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(<span class="string">"Angka: "</span> + i);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;i++;<br>
-                            } <span class="keyword">while</span> (i <= 5);
-                        </div>
-                    </div>
-                    
-                    <div class="contoh-box">
-                        <h4>💻 Contoh Perulangan dalam Program</h4>
-                        <div class="code-block">
-                            <span class="comment">// 1. Menghitung total nilai</span><br>
-                            <span class="keyword">int</span>[] nilai = {80, 85, 90, 75, 88};<br>
-                            <span class="keyword">int</span> total = 0;<br><br>
-                            
-                            <span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i < nilai.length; i++) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;total = total + nilai[i];<br>
-                            }<br>
-                            <span class="output">System.out.println</span>(<span class="string">"Total: "</span> + total);
-                            
-                            <br><br>
-                            <span class="comment">// 2. Mencetak tabel perkalian</span><br>
-                            <span class="keyword">for</span> (<span class="keyword">int</span> i = 1; i <= 10; i++) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> (<span class="keyword">int</span> j = 1; j <= 10; j++) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.print</span>(i * j + <span class="string">"\t"</span>);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>();<br>
-                            }
-                            
-                            <br><br>
-                            <span class="comment">// 3. Mencetak pola bintang</span><br>
-                            <span class="keyword">for</span> (<span class="keyword">int</span> i = 1; i <= 5; i++) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> (<span class="keyword">int</span> j = 1; j <= i; j++) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.print</span>(<span class="string">"*"</span>);<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>();<br>
-                            }
-                        </div>
-                    </div>
-                    
-                    <div class="contoh-box">
-                        <h4>📊 Perbandingan FOR, WHILE, DO-WHILE</h4>
+                        <h4>Kapan Pakai Yang Mana?</h4>
                         <table class="tag-table">
-                            <tr><th>Jenis</th><th>Kapan Dipakai</th><th>Minimal Jalan</th></tr>
-                            <tr><td><strong>FOR</strong></td><td>Tahu pasti berapa kali</td><td>0 kali</td></tr>
-                            <tr><td><strong>WHILE</strong></td><td>Tidak tahu pasti, cek di awal</td><td>0 kali</td></tr>
-                            <tr><td><strong>DO-WHILE</strong></td><td>Harus jalan minimal 1 kali</td><td>1 kali</td></tr>
+                            <tr>
+                                <th>Jenis</th>
+                                <th>Kapan Dipakai</th>
+                            </tr>
+                            <tr>
+                                <td>FOR</td>
+                                <td>Kalau tahu pasti berapa kali</td>
+                            </tr>
+                            <tr>
+                                <td>WHILE</td>
+                                <td>Kalau nggak tahu pasti, dicek di awal</td>
+                            </tr>
+                            <tr>
+                                <td>DO-WHILE</td>
+                                <td>Harus jalan minimal 1 kali</td>
+                            </tr>
                         </table>
                     </div>
-                    
+
                     <div class="quiz-box">
-                        <h4>✏️ Latihan Perulangan</h4>
-                        <p>Buatlah perulangan untuk:</p>
+                        <h4>Latihan</h4>
+                        <p>Buat perulangan untuk:</p>
                         <p class="quiz-soal">"Mencetak angka genap dari 2 sampai 10"</p>
                         <button class="btn btn-small btn-info" onclick="tampilkanJawaban('jawaban8')">Lihat Jawaban</button>
                         <div id="jawaban8" class="jawaban" style="display:none;">
                             <div class="code-block">
-                                <span class="comment">// Cara 1: Dengan FOR</span><br>
-                                <span class="keyword">for</span> (<span class="keyword">int</span> i = 2; i <= 10; i += 2) {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(i);<br>
-                                }<br><br>
-                                
-                                <span class="comment">// Cara 2: Dengan WHILE</span><br>
-                                <span class="keyword">int</span> i = 2;<br>
-                                <span class="keyword">while</span> (i <= 10) {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="output">System.out.println</span>(i);<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;i += 2;<br>
-                                }<br><br>
-                                
-                                <span class="comment">// Output:</span><br>
-                                <span class="comment">// 2</span><br>
-                                <span class="comment">// 4</span><br>
-                                <span class="comment">// 6</span><br>
-                                <span class="comment">// 8</span><br>
-                                <span class="comment">// 10</span>
+                                <span class="keyword">for</span> (<span class="keyword">int</span> i = 2; i <= 10; i += 2) {
+                                    <span class="output">System.out.println</span>(i);
+                                }
+                                <span class="comment">// Output: 2, 4, 6, 8, 10</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- ========== BOTTOM NAV ========== -->
+
             <div class="bottom-nav">
                 <a href="bab7.html" class="btn">← Bab 7: Percabangan</a>
-                <a href="index.html" class="btn">🏠 Home</a>
+                <a href="index.html" class="btn">Home</a>
                 <a href="bab9.html" class="btn btn-primary">Bab 9: PBO →</a>
             </div>
         </div>
@@ -223,10 +135,10 @@
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 Belajar Dari Nol - Untuk Siswa RPL Kelas 11</p>
+            <p>© 2026 Belajar RPL - Buat siswa kelas 11</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-  </html>
+</html>
