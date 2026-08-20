@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bab 10 - Basis Data & SQL</title>
+    <title>Bab 10 - Database & SQL</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ========== NAVBAR ========== -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <span class="logo-icon">🚀</span>
-                <span class="logo-text">BelajarDariNol</span>
-            </div>
-            
-            <button class="nav-toggle" id="navToggle">☰</button>
-            
+            <a href="index.html" class="logo">
+                <span class="logo-icon">R</span>
+                <span class="logo-text">Belajar<span>RPL</span></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle">
+                <span class="garis"></span>
+                <span class="garis"></span>
+                <span class="garis"></span>
+            </button>
+
             <ul class="nav-menu" id="navMenu">
                 <li><a href="bab1.html">1. Logika</a></li>
                 <li><a href="bab2.html">2. Algoritma</a></li>
-                <li><a href="bab3.html">3. HTML Dasar</a></li>
-                <li><a href="bab4.html">4. CSS Dasar</a></li>
+                <li><a href="bab3.html">3. HTML</a></li>
+                <li><a href="bab4.html">4. CSS</a></li>
                 <li><a href="bab5.html">5. JavaScript</a></li>
                 <li><a href="bab6.html">6. Variabel</a></li>
                 <li><a href="bab7.html">7. Percabangan</a></li>
@@ -33,232 +36,194 @@
         </div>
     </nav>
 
-    <!-- ========== BAB 10: DATABASE ========== -->
-    <section class="bab bab-full bab-alt">
+    <section class="bab">
         <div class="container">
             <div class="bab-header">
                 <span class="bab-number">10</span>
-                <h2>Basis Data & SQL</h2>
+                <h2>Database & SQL</h2>
                 <div class="bab-nav">
                     <a href="bab9.html" class="btn btn-small">← Bab 9</a>
-                    <a href="index.html" class="btn btn-small">🏠 Home</a>
+                    <a href="index.html" class="btn btn-small">Home</a>
                 </div>
             </div>
-            
+
             <div class="bab-content">
                 <div class="materi-box">
-                    <h3>🗄️ Database = Tempat Penyimpanan Data</h3>
+                    <h3>Apa Itu Database?</h3>
                     <p>
-                        <strong>Basis Data (Database)</strong> adalah tempat menyimpan data 
-                        secara terstruktur. Kayak <strong>lemari arsip</strong> digital!
-                        <strong>SQL</strong> (Structured Query Language) adalah bahasa 
-                        untuk berkomunikasi dengan database.
+                        Database itu tempat nyimpen data secara terstruktur. 
+                        Kayak lemari arsip gitu, tapi versi digital.
                     </p>
-                    
+                    <p>
+                        <strong>SQL</strong> adalah bahasa yang dipakai buat ngobrol sama database.
+                    </p>
+
                     <div class="contoh-box">
-                        <h4>📌 Analogi Database</h4>
-                        <ul>
-                            <li><strong>Database</strong> = Lemari arsip</li>
-                            <li><strong>Tabel</strong> = Folder di dalam lemari</li>
-                            <li><strong>Row/Record</strong> = Satu lembar data</li>
-                            <li><strong>Column/Field</strong> = Kolom data (nama, umur, dll)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="contoh-box">
-                        <h4>📌 Tabel dalam Database</h4>
+                        <h4>Perintah SQL Dasar</h4>
                         <table class="tag-table">
-                            <tr><th>nis (INT)</th><th>nama (VARCHAR)</th><th>kelas (VARCHAR)</th><th>umur (INT)</th></tr>
-                            <tr><td>101</td><td>Budi</td><td>XI-RPL</td><td>17</td></tr>
-                            <tr><td>102</td><td>Ani</td><td>XI-RPL</td><td>16</td></tr>
-                            <tr><td>103</td><td>Caca</td><td>XI-RPL</td><td>17</td></tr>
+                            <tr>
+                                <th>Perintah</th>
+                                <th>Fungsi</th>
+                            </tr>
+                            <tr>
+                                <td>CREATE DATABASE</td>
+                                <td>Bikin database baru</td>
+                            </tr>
+                            <tr>
+                                <td>CREATE TABLE</td>
+                                <td>Bikin tabel</td>
+                            </tr>
+                            <tr>
+                                <td>INSERT INTO</td>
+                                <td>Tambah data</td>
+                            </tr>
+                            <tr>
+                                <td>SELECT</td>
+                                <td>Ambil data</td>
+                            </tr>
+                            <tr>
+                                <td>UPDATE</td>
+                                <td>Ubah data</td>
+                            </tr>
+                            <tr>
+                                <td>DELETE</td>
+                                <td>Hapus data</td>
+                            </tr>
                         </table>
-                        <p style="margin-top:10px; font-size:14px;">
-                            <strong>nis</strong> = Primary Key (identitas unik setiap data)
-                        </p>
                     </div>
-                    
+
                     <div class="contoh-box">
-                        <h4>📌 Perintah SQL Dasar</h4>
-                        <table class="tag-table">
-                            <tr><th>Perintah</th><th>Fungsi</th><th>Contoh</th></tr>
-                            <tr><td><strong>CREATE DATABASE</strong></td><td>Membuat database</td><td>CREATE DATABASE sekolah;</td></tr>
-                            <tr><td><strong>CREATE TABLE</strong></td><td>Membuat tabel</td><td>CREATE TABLE siswa (...);</td></tr>
-                            <tr><td><strong>INSERT INTO</strong></td><td>Menambah data</td><td>INSERT INTO siswa VALUES (...);</td></tr>
-                            <tr><td><strong>SELECT</strong></td><td>Mengambil data</td><td>SELECT * FROM siswa;</td></tr>
-                            <tr><td><strong>UPDATE</strong></td><td>Mengubah data</td><td>UPDATE siswa SET nama='Budi' WHERE nis=101;</td></tr>
-                            <tr><td><strong>DELETE</strong></td><td>Menghapus data</td><td>DELETE FROM siswa WHERE nis=103;</td></tr>
-                        </table>
-                    </div>
-                    
-                    <div class="contoh-box">
-                        <h4>💻 Contoh SQL Lengkap</h4>
+                        <h4>Contoh SQL</h4>
                         <div class="code-block">
-                            <span class="comment">-- 1. Membuat Database</span><br>
-                            <span class="keyword">CREATE DATABASE</span> sekolah;<br><br>
-                            
-                            <span class="comment">-- 2. Menggunakan Database</span><br>
-                            <span class="keyword">USE</span> sekolah;<br><br>
-                            
-                            <span class="comment">-- 3. Membuat Tabel</span><br>
-                            <span class="keyword">CREATE TABLE</span> siswa (<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;nis <span class="keyword">INT PRIMARY KEY</span>,<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;nama <span class="keyword">VARCHAR</span>(50) <span class="keyword">NOT NULL</span>,<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;kelas <span class="keyword">VARCHAR</span>(10),<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;umur <span class="keyword">INT</span><br>
-                            );<br><br>
-                            
-                            <span class="comment">-- 4. Menambah Data (INSERT)</span><br>
-                            <span class="keyword">INSERT INTO</span> siswa <span class="keyword">VALUES</span> (101, <span class="string">'Budi'</span>, <span class="string">'XI-RPL'</span>, 17);<br>
-                            <span class="keyword">INSERT INTO</span> siswa <span class="keyword">VALUES</span> (102, <span class="string">'Ani'</span>, <span class="string">'XI-RPL'</span>, 16);<br>
-                            <span class="keyword">INSERT INTO</span> siswa <span class="keyword">VALUES</span> (103, <span class="string">'Caca'</span>, <span class="string">'XI-RPL'</span>, 17);<br><br>
-                            
-                            <span class="comment">-- 5. Mengambil Data (SELECT)</span><br>
-                            <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> siswa; <span class="comment">-- Tampilkan semua</span><br>
-                            <span class="keyword">SELECT</span> nama, kelas <span class="keyword">FROM</span> siswa; <span class="comment">-- Tampilkan nama & kelas saja</span><br>
-                            <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> siswa <span class="keyword">WHERE</span> umur > 16; <span class="comment">-- Filter umur > 16</span><br><br>
-                            
-                            <span class="comment">-- 6. Mengubah Data (UPDATE)</span><br>
-                            <span class="keyword">UPDATE</span> siswa <span class="keyword">SET</span> nama = <span class="string">'Budi Santoso'</span> <span class="keyword">WHERE</span> nis = 101;<br><br>
-                            
-                            <span class="comment">-- 7. Menghapus Data (DELETE)</span><br>
-                            <span class="keyword">DELETE FROM</span> siswa <span class="keyword">WHERE</span> nis = 103;<br><br>
-                            
-                            <span class="comment">-- 8. Menghapus Tabel (DROP)</span><br>
-                            <span class="keyword">DROP TABLE</span> siswa;<br><br>
-                            
-                            <span class="comment">-- 9. Menghapus Database</span><br>
-                            <span class="keyword">DROP DATABASE</span> sekolah;
+                            <span class="comment">-- Bikin database</span>
+                            <span class="keyword">CREATE DATABASE</span> sekolah;
+
+                            <span class="comment">-- Bikin tabel siswa</span>
+                            <span class="keyword">CREATE TABLE</span> siswa (
+                                nis <span class="keyword">INT PRIMARY KEY</span>,
+                                nama <span class="keyword">VARCHAR</span>(50),
+                                kelas <span class="keyword">VARCHAR</span>(10)
+                            );
+
+                            <span class="comment">-- Tambah data</span>
+                            <span class="keyword">INSERT INTO</span> siswa <span class="keyword">VALUES</span> (101, <span class="string">'Budi'</span>, <span class="string">'XI-RPL'</span>);
+                            <span class="keyword">INSERT INTO</span> siswa <span class="keyword">VALUES</span> (102, <span class="string">'Ani'</span>, <span class="string">'XI-RPL'</span>);
+
+                            <span class="comment">-- Ambil data</span>
+                            <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> siswa;
+                            <span class="comment">-- Hasil: 101 | Budi | XI-RPL</span>
+                            <span class="comment">--         102 | Ani  | XI-RPL</span>
+
+                            <span class="comment">-- Ubah data</span>
+                            <span class="keyword">UPDATE</span> siswa <span class="keyword">SET</span> nama = <span class="string">'Budi Santoso'</span> <span class="keyword">WHERE</span> nis = 101;
+
+                            <span class="comment">-- Hapus data</span>
+                            <span class="keyword">DELETE FROM</span> siswa <span class="keyword">WHERE</span> nis = 102;
                         </div>
                     </div>
-                    
+
                     <div class="contoh-box">
-                        <h4>📌 ERD (Entity Relationship Diagram)</h4>
-                        <p>
-                            <strong>ERD</strong> adalah gambar yang menunjukkan 
-                            <strong>hubungan</strong> antar tabel dalam database.
-                        </p>
-                        <div style="background:#1a202c; color:#e2e8f0; padding:20px; border-radius:10px; font-family:monospace; margin-top:10px;">
-                            <span style="color:#4fc3f7;">SISWA</span>          <span style="color:#fbd38d;">1</span> ---- <span style="color:#fbd38d;">M</span> <span style="color:#4fc3f7;">NILAI</span><br>
-                            <span style="color:#718096;">(nis, nama, kelas)</span>    <span style="color:#718096;">(id_nilai, nis, mapel, nilai)</span>
+                        <h4>Relasi Tabel</h4>
+                        <div style="background:#1a1a2e; color:#e8e8f0; padding:15px; border-radius:8px; font-family:monospace; font-size:14px;">
+                            <span style="color:#8be9fd;">SISWA</span> <span style="color:#f1fa8c;">1</span> ---- <span style="color:#f1fa8c;">M</span> <span style="color:#8be9fd;">NILAI</span>
+                            <span style="color:#6272a4; display:block; font-size:13px;">(nis, nama, kelas)    (id, nis, mapel, nilai)</span>
                         </div>
-                        <p style="margin-top:10px; font-size:14px;">
-                            <strong>Baca:</strong> Satu Siswa bisa punya banyak Nilai
+                        <p style="margin-top:8px; font-size:14px;">
+                            <strong>Baca:</strong> Satu siswa bisa punya banyak nilai
                         </p>
                     </div>
-                    
-                    <div class="contoh-box">
-                        <h4>📌 Relasi Antar Tabel</h4>
-                        <table class="tag-table">
-                            <tr><th>Relasi</th><th>Arti</th><th>Contoh</th></tr>
-                            <tr><td><strong>1:1</strong></td><td>Satu ke satu</td><td>1 Siswa punya 1 KTP</td></tr>
-                            <tr><td><strong>1:M</strong></td><td>Satu ke banyak</td><td>1 Kelas punya banyak Siswa</td></tr>
-                            <tr><td><strong>M:M</strong></td><td>Banyak ke banyak</td><td>Siswa ambil banyak Mata Pelajaran</td></tr>
-                        </table>
-                    </div>
-                    
+
                     <div class="quiz-box">
-                        <h4>✏️ Latihan SQL</h4>
-                        <p>Buatlah query SQL untuk:</p>
-                        <p class="quiz-soal">"Membuat tabel 'buku' dengan kolom: id_buku (INT), judul (VARCHAR), penulis (VARCHAR), tahun (INT)"</p>
+                        <h4>Latihan</h4>
+                        <p>Buat query SQL untuk:</p>
+                        <p class="quiz-soal">"Membuat tabel 'buku' dengan id_buku, judul, penulis"</p>
                         <button class="btn btn-small btn-info" onclick="tampilkanJawaban('jawaban10')">Lihat Jawaban</button>
                         <div id="jawaban10" class="jawaban" style="display:none;">
                             <div class="code-block">
-                                <span class="keyword">CREATE TABLE</span> buku (<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;id_buku <span class="keyword">INT PRIMARY KEY</span>,<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;judul <span class="keyword">VARCHAR</span>(100),<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;penulis <span class="keyword">VARCHAR</span>(50),<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;tahun <span class="keyword">INT</span><br>
+                                <span class="keyword">CREATE TABLE</span> buku (
+                                    id_buku <span class="keyword">INT PRIMARY KEY</span>,
+                                    judul <span class="keyword">VARCHAR</span>(100),
+                                    penulis <span class="keyword">VARCHAR</span>(50)
                                 );
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="quiz-box" style="border-color:#f6ad55;">
-                        <h4>🎯 Tugas Akhir - Mini Project</h4>
-                        <p>Buatlah database sederhana untuk <strong>Sistem Perpustakaan</strong>:</p>
-                        <ol style="padding-left:25px; margin-top:10px;">
+
+                    <div class="quiz-box" style="border-color:#e74c3c;">
+                        <h4>Tugas Akhir</h4>
+                        <p>Buat database untuk <strong>Sistem Perpustakaan</strong>:</p>
+                        <ol style="padding-left:22px; margin-top:10px;">
                             <li>Buat database <strong>perpustakaan</strong></li>
                             <li>Buat tabel <strong>buku</strong> (id_buku, judul, penulis, stok)</li>
                             <li>Buat tabel <strong>anggota</strong> (id_anggota, nama, alamat)</li>
                             <li>Buat tabel <strong>peminjaman</strong> (id_pinjam, id_buku, id_anggota, tgl_pinjam)</li>
-                            <li>Tambahkan 3 data buku, 3 data anggota, dan 2 data peminjaman</li>
-                            <li>Tampilkan semua data dengan SELECT</li>
+                            <li>Masukkan 3 data ke setiap tabel</li>
+                            <li>Tampilkan semua data</li>
                         </ol>
-                        <button class="btn btn-small btn-success" onclick="tampilkanJawaban('jawabanProject')" style="margin-top:15px;">
-                            Lihat Jawaban Project
+                        <button class="btn btn-small btn-success" onclick="tampilkanJawaban('jawabanProject')" style="margin-top:12px;">
+                            Lihat Jawaban
                         </button>
                         <div id="jawabanProject" class="jawaban" style="display:none;">
                             <div class="code-block" style="font-size:12px; max-height:300px; overflow-y:auto;">
-                                <span class="comment">-- 1. Buat Database</span><br>
-                                <span class="keyword">CREATE DATABASE</span> perpustakaan;<br>
-                                <span class="keyword">USE</span> perpustakaan;<br><br>
-                                
-                                <span class="comment">-- 2. Buat Tabel Buku</span><br>
-                                <span class="keyword">CREATE TABLE</span> buku (<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;id_buku <span class="keyword">INT PRIMARY KEY</span>,<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;judul <span class="keyword">VARCHAR</span>(100),<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;penulis <span class="keyword">VARCHAR</span>(50),<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;stok <span class="keyword">INT</span><br>
-                                );<br><br>
-                                
-                                <span class="comment">-- 3. Buat Tabel Anggota</span><br>
-                                <span class="keyword">CREATE TABLE</span> anggota (<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;id_anggota <span class="keyword">INT PRIMARY KEY</span>,<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;nama <span class="keyword">VARCHAR</span>(50),<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;alamat <span class="keyword">VARCHAR</span>(100)<br>
-                                );<br><br>
-                                
-                                <span class="comment">-- 4. Buat Tabel Peminjaman</span><br>
-                                <span class="keyword">CREATE TABLE</span> peminjaman (<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;id_pinjam <span class="keyword">INT PRIMARY KEY</span>,<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;id_buku <span class="keyword">INT</span>,<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;id_anggota <span class="keyword">INT</span>,<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;tgl_pinjam <span class="keyword">DATE</span><br>
-                                );<br><br>
-                                
-                                <span class="comment">-- 5. Tambah Data Buku</span><br>
-                                <span class="keyword">INSERT INTO</span> buku <span class="keyword">VALUES</span> (1, <span class="string">'Pemrograman Java'</span>, <span class="string">'Budi'</span>, 5);<br>
-                                <span class="keyword">INSERT INTO</span> buku <span class="keyword">VALUES</span> (2, <span class="string">'Belajar SQL'</span>, <span class="string">'Ani'</span>, 3);<br>
-                                <span class="keyword">INSERT INTO</span> buku <span class="keyword">VALUES</span> (3, <span class="string">'HTML & CSS'</span>, <span class="string">'Caca'</span>, 4);<br><br>
-                                
-                                <span class="comment">-- 6. Tambah Data Anggota</span><br>
-                                <span class="keyword">INSERT INTO</span> anggota <span class="keyword">VALUES</span> (1, <span class="string">'Dedi'</span>, <span class="string">'Jl. Mawar No. 1'</span>);<br>
-                                <span class="keyword">INSERT INTO</span> anggota <span class="keyword">VALUES</span> (2, <span class="string">'Eka'</span>, <span class="string">'Jl. Melati No. 2'</span>);<br>
-                                <span class="keyword">INSERT INTO</span> anggota <span class="keyword">VALUES</span> (3, <span class="string">'Fina'</span>, <span class="string">'Jl. Anggrek No. 3'</span>);<br><br>
-                                
-                                <span class="comment">-- 7. Tambah Data Peminjaman</span><br>
-                                <span class="keyword">INSERT INTO</span> peminjaman <span class="keyword">VALUES</span> (1, 1, 1, <span class="string">'2026-01-10'</span>);<br>
-                                <span class="keyword">INSERT INTO</span> peminjaman <span class="keyword">VALUES</span> (2, 2, 2, <span class="string">'2026-01-12'</span>);<br><br>
-                                
-                                <span class="comment">-- 8. Tampilkan Semua Data</span><br>
-                                <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> buku;<br>
-                                <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> anggota;<br>
+                                <span class="keyword">CREATE DATABASE</span> perpustakaan;
+                                <span class="keyword">USE</span> perpustakaan;
+
+                                <span class="keyword">CREATE TABLE</span> buku (
+                                    id_buku <span class="keyword">INT PRIMARY KEY</span>,
+                                    judul <span class="keyword">VARCHAR</span>(100),
+                                    penulis <span class="keyword">VARCHAR</span>(50),
+                                    stok <span class="keyword">INT</span>
+                                );
+
+                                <span class="keyword">CREATE TABLE</span> anggota (
+                                    id_anggota <span class="keyword">INT PRIMARY KEY</span>,
+                                    nama <span class="keyword">VARCHAR</span>(50),
+                                    alamat <span class="keyword">VARCHAR</span>(100)
+                                );
+
+                                <span class="keyword">CREATE TABLE</span> peminjaman (
+                                    id_pinjam <span class="keyword">INT PRIMARY KEY</span>,
+                                    id_buku <span class="keyword">INT</span>,
+                                    id_anggota <span class="keyword">INT</span>,
+                                    tgl_pinjam <span class="keyword">DATE</span>
+                                );
+
+                                <span class="keyword">INSERT INTO</span> buku <span class="keyword">VALUES</span> (1, <span class="string">'Java Dasar'</span>, <span class="string">'Budi'</span>, 5);
+                                <span class="keyword">INSERT INTO</span> buku <span class="keyword">VALUES</span> (2, <span class="string">'SQL'</span>, <span class="string">'Ani'</span>, 3);
+                                <span class="keyword">INSERT INTO</span> buku <span class="keyword">VALUES</span> (3, <span class="string">'HTML'</span>, <span class="string">'Caca'</span>, 4);
+
+                                <span class="keyword">INSERT INTO</span> anggota <span class="keyword">VALUES</span> (1, <span class="string">'Dedi'</span>, <span class="string">'Jl. Mawar 1'</span>);
+                                <span class="keyword">INSERT INTO</span> anggota <span class="keyword">VALUES</span> (2, <span class="string">'Eka'</span>, <span class="string">'Jl. Melati 2'</span>);
+                                <span class="keyword">INSERT INTO</span> anggota <span class="keyword">VALUES</span> (3, <span class="string">'Fina'</span>, <span class="string">'Jl. Anggrek 3'</span>);
+
+                                <span class="keyword">INSERT INTO</span> peminjaman <span class="keyword">VALUES</span> (1, 1, 1, <span class="string">'2026-01-10'</span>);
+                                <span class="keyword">INSERT INTO</span> peminjaman <span class="keyword">VALUES</span> (2, 2, 2, <span class="string">'2026-01-12'</span>);
+
+                                <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> buku;
+                                <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> anggota;
                                 <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> peminjaman;
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
-            
-            <!-- ========== BOTTOM NAV ========== -->
+
             <div class="bottom-nav">
                 <a href="bab9.html" class="btn">← Bab 9: PBO</a>
-                <a href="index.html" class="btn btn-primary">🏠 Selesai! Kembali ke Home</a>
+                <a href="index.html" class="btn btn-primary">Selesai! Kembali ke Home</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 Belajar Dari Nol - Untuk Siswa RPL Kelas 11</p>
-            <p style="font-size:14px; margin-top:10px; opacity:0.7;">
-                🎉 Selamat! Kamu sudah menyelesaikan semua 10 bab!
+            <p>© 2026 Belajar RPL - Buat siswa kelas 11</p>
+            <p style="font-size:14px; margin-top:6px; opacity:0.6;">
+                Selamat! Kamu sudah selesai semua bab.
             </p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-  </html>
+</html>
